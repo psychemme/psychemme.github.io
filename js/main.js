@@ -22,7 +22,7 @@
   });
   const missingCount = ['code', 'dataset', 'models', 'logs'].filter((key) => !resources[key]).length;
   if (missingCount === 0) {
-    document.querySelector('.availability-note').textContent = 'Project resources are linked above under anonymous project identities.';
+    document.querySelector('.availability-note').textContent = 'This partial release includes selected core code, 78 text questions, source locators for all 630 episodes, two paper LoRA adapters, and complete main-table numeric results. Videos remain at their original sources.';
   }
 
   const nav = document.querySelector('.nav-links');

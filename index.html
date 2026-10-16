@@ -13,9 +13,10 @@
   <meta name="twitter:card" content="summary">
   <link rel="canonical" href="https://psychemme.github.io/">
   <link rel="icon" href="assets/logo/favicon.png" type="image/png">
-  <link rel="stylesheet" href="css/style.css?v=9">
+  <link rel="stylesheet" href="css/style.css?v=10">
   <script src="js/resources.js?v=3" defer></script>
-  <script src="js/main.js?v=6" defer></script>
+  <script src="js/main.js?v=7" defer></script>
+  <script src="js/onboarding.js?v=1" defer></script>
   <title>PsycheMME: A Psychology-Informed Benchmark for Social Understanding and Interaction in Videos</title>
 </head>
 <body id="top">
@@ -24,7 +25,7 @@
   <nav class="nav-inner wrap" aria-label="Main navigation">
     <a class="brand" href="#top" aria-label="PsycheMME home"><img src="assets/logo/mark.webp" alt="" width="46" height="32"><span>Psyche<span>MME</span></span></a>
     <div class="nav-links" id="nav-links">
-      <a href="#overview">Overview</a><a href="#results">Results</a><a href="#method">Method</a><a href="#cases">Case study</a><a href="#resources">Release</a>
+      <a href="#start">Get started</a><a href="#overview">Overview</a><a href="#examples">Examples</a><a href="#results">Results</a><a href="#method">Method</a><a href="#cases">Case study</a><a href="#resources">Release</a>
     </div>
   </nav>
 </header>
@@ -33,14 +34,48 @@
   <div class="wrap">
     <h1 id="paper-title"><span class="title-line"><span class="title-project">PsycheMME:</span> A Psychology-Informed Benchmark</span><span class="title-line">for Social Understanding and Interaction in Videos</span></h1>
     <p class="anonymous-submission">Anonymous ACL submission · project page</p>
-    <p class="hero-copy">Understanding human needs and selecting appropriate interactions require more than recognizing actions. <strong>PsycheMME</strong> evaluates how multimodal models interpret social cues, infer psychological states and needs, and choose when and how to respond. Informed by <strong>Social Information Processing</strong> and the <strong>Perception-Action Cycle</strong>, it organizes these judgments into eight capabilities. <strong>Reasoning-Verified evaluation</strong> assesses the support and logical consistency of explicit rationales alongside answer correctness.</p>
-    <div class="hero-actions" aria-label="Project resources"><button class="button" type="button" data-resource="code" data-resource-label="Code" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 7-5 5 5 5m8-10 5 5-5 5m-3-13-2 20"/></svg> Code <small>Pending</small></button><button class="button" type="button" data-resource="dataset" data-resource-label="Dataset" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 4 16 4 16 0V5M4 12c0 4 16 4 16 0"/></svg> Dataset <small>Pending</small></button><button class="button" type="button" data-resource="models" data-resource-label="Models" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 9 5v10l-9 5-9-5V7zM3 7l9 5 9-5M12 12v10"/></svg> Models <small>Pending</small></button><button class="button" type="button" data-resource="logs" data-resource-label="Evaluation Logs" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18H6zM9 7h6M9 12h6M9 17h4"/></svg> Evaluation Logs <small>Pending</small></button></div>
+    <p class="hero-copy">A model can choose the right response for the wrong reason. <strong>PsycheMME</strong> tests how video models understand people’s states and needs, decide when and how to respond, and justify those decisions with evidence. Its eight psychology-informed capabilities and <strong>Reasoning-Verified evaluation</strong> make those strengths and failures visible.</p>
+    <div class="hero-actions" aria-label="Project resources"><a class="button primary" href="#start">Get started ↓</a><a class="button" data-resource="code" href="https://github.com/psychemme/PsycheMME" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 7-5 5 5 5m8-10 5 5-5 5m-3-13-2 20"/></svg> Code</a><a class="button" data-resource="dataset" href="https://huggingface.co/datasets/psychemme/PsycheMME" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 4 16 4 16 0V5M4 12c0 4 16 4 16 0"/></svg> Dataset</a><a class="button" data-resource="models" href="https://huggingface.co/psychemme" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 9 5v10l-9 5-9-5V7zM3 7l9 5 9-5M12 12v10"/></svg> Models</a><a class="button" data-resource="logs" href="https://huggingface.co/datasets/psychemme/PsycheMME/tree/main/results" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18H6zM9 7h6M9 12h6M9 17h4"/></svg> Evaluation Logs</a></div>
     <div class="hero-stats" aria-label="Benchmark at a glance">
       <div class="stat"><strong>630</strong><span>video episodes</span></div>
       <div class="stat"><strong>1,000</strong><span>questions</span></div>
       <div class="stat"><strong>8</strong><span>diagnostic capabilities</span></div>
       <div class="stat"><strong>17</strong><span>frozen models</span></div>
     </div>
+  </div>
+</section>
+<section class="section getting-started" id="start" aria-labelledby="start-title">
+  <div class="wrap">
+    <div class="section-header"><div><p class="section-label">Start here</p><h2 id="start-title">Understand it. Run it. Build on it.</h2></div><p class="section-intro">Start with an offline example, check the archived results, or connect your model. Each path explains what you need and what you should see.</p></div>
+    <div class="start-tabs" role="tablist" aria-label="Choose a starting point">
+      <button id="tab-demo" role="tab" aria-controls="panel-demo" aria-selected="true" type="button">01 · Try the offline demo</button>
+      <button id="tab-replay" role="tab" aria-controls="panel-replay" aria-selected="false" type="button">02 · Replay paper scores</button>
+      <button id="tab-model" role="tab" aria-controls="panel-model" aria-selected="false" type="button">03 · Evaluate your model</button>
+    </div>
+    <div class="start-panel" id="panel-demo" role="tabpanel" aria-labelledby="tab-demo">
+      <div class="start-copy"><span class="path-tag">Python 3.10+ · no GPU or API key</span><h3>Your first checked result</h3><p>Eight synthetic items show how answers, rationale weights and failures become scores. Separate files make each step inspectable.</p><p class="expected-output"><strong>Expected:</strong> Raw 75.00% · Verified 71.18%<br>Software demonstration; no real model or Judge calls.</p><a href="https://github.com/psychemme/PsycheMME/blob/main/docs/QUICKSTART.md" target="_blank" rel="noopener">Step-by-step guide ↗</a></div>
+      <div class="command-box"><button type="button" class="copy-command" data-copy="demo-command">Copy commands</button><pre id="demo-command" tabindex="0"><code>git clone https://github.com/psychemme/PsycheMME.git
+cd PsycheMME
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install .
+psychemme doctor
+psychemme demo --output runs/demo</code></pre></div>
+    </div>
+    <div class="start-panel" id="panel-replay" role="tabpanel" aria-labelledby="tab-replay">
+      <div class="start-copy"><span class="path-tag">After installation · public download</span><h3>Check the archived paper table</h3><p>Download a fixed, hash-verified data snapshot and recompute scores from persisted answer credit and Judge labels. No videos, weights or API key required.</p><p class="expected-output"><strong>Expected:</strong> PASS · 19,000 rows · 190 table values<br>Formula replay; no independent re-grading of all answers.</p><a href="https://github.com/psychemme/PsycheMME/blob/main/docs/REPRODUCIBILITY.md" target="_blank" rel="noopener">What reproduction establishes ↗</a></div>
+      <div class="command-box"><button type="button" class="copy-command" data-copy="replay-command">Copy commands</button><pre id="replay-command" tabindex="0"><code>psychemme download --bundle replay \
+  --output data/PsycheMME
+psychemme doctor --data-root data/PsycheMME
+psychemme replay --root data/PsycheMME \
+  --output runs/paper_replay.json</code></pre></div>
+    </div>
+    <div class="start-panel" id="panel-model" role="tabpanel" aria-labelledby="tab-model">
+      <div class="start-copy"><span class="path-tag">Authorized media · model backend · separate Judge</span><h3>Bring your own model</h3><p>Use the local Qwen runner, a compatible image-chat API, or import responses from your existing system. The scorer keeps missing and failed records in the declared population.</p><a href="https://github.com/psychemme/PsycheMME/blob/main/docs/MODEL_INTEGRATION.md" target="_blank" rel="noopener">Follow the complete model recipe ↗</a></div>
+      <ol class="model-steps"><li><strong>Prepare public inputs</strong><span>Get the 78-question review subset and legally obtained, hash-matching video clips. Full clip reconstruction is not verified for every source.</span></li><li><strong>Generate predictions</strong><span>Use the final public prompt and nine-key response format. Gold references never enter the tested model.</span></li><li><strong>Judge, then score</strong><span>References go to the separate text Judge. Report the exact subset, configuration and failures.</span></li></ol>
+    </div>
+    <p class="start-footnote">Current public scope: <strong>78 text questions</strong>, metadata for 1,000 questions, and source locators for 630 episodes. All videos remain at original sources. <a href="https://github.com/psychemme/PsycheMME/blob/main/docs/RELEASE_CHECKLIST.md" target="_blank" rel="noopener">Release scope ↗</a> · <a href="https://github.com/psychemme/PsycheMME/issues/new/choose" target="_blank" rel="noopener">Get help ↗</a></p>
+    <span class="sr-only" id="copy-status" role="status" aria-live="polite"></span>
   </div>
 </section>
 <section class="section overview" id="overview" aria-labelledby="overview-title">
@@ -59,6 +94,15 @@
       <p class="composition-note">630 episodes across eight source groups support 890 choice questions and 110 open questions. The overview illustrates 16 scene categories. Uneven capability counts motivate macro averaging across the eight capabilities.</p>
       <figure class="paper-figure "><a class="figure-frame" href="assets/figures/statistics.webp" data-lightbox data-title="Figure 4. Benchmark statistics" data-vector="assets/figures/statistics.pdf" aria-label="Enlarge Figure 4. Benchmark statistics"><img src="assets/figures/statistics.webp" alt="Figure 4. Benchmark statistics" width="3000" height="1333" loading="lazy" decoding="async"><span class="zoom-hint"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 2H2v4m8-4h4v4M2 10v4h4m8-4v4h-4"/></svg> Enlarge</span></a><figcaption><strong>Figure 4.</strong> Capability taxonomy, dataset composition, video duration, question length, and frequent keywords. <a class="vector-link" href="assets/figures/statistics.pdf" target="_blank" rel="noopener">Vector PDF ↗</a></figcaption></figure>
     </details>
+  </div>
+</section>
+<section class="section examples" id="examples" aria-labelledby="examples-title">
+  <div class="wrap">
+    <div class="section-header"><div><p class="section-label">Explore the task</p><h2 id="examples-title">What does one question look like?</h2></div><p class="section-intro">Browse one released text example per capability. Inputs and evaluator references stay distinct. These public copies are selectively redacted; the original videos are not hosted here.</p></div>
+    <div class="sample-toolbar"><label for="sample-capability">Choose a capability</label><select id="sample-capability"><option value="G">G · Grounding</option><option value="W">W · Psychological Understanding</option><option value="N">N · Need</option><option value="T">T · Timing</option><option value="S">S · Verbal Response</option><option value="A">A · Action</option><option value="M">M · Memory</option><option value="R">R · Risk</option></select><span id="sample-meta"></span></div>
+    <div id="sample-content" aria-live="polite"><p class="sample-loading">Loading public text examples… <a href="https://huggingface.co/datasets/psychemme/PsycheMME/tree/main/dataset/text_subset" target="_blank" rel="noopener">Read the source files ↗</a></p></div>
+    <p class="sample-license">Examples: first released record per capability in file order, not selected by model performance. EasyCom-derived text · CC BY-NC 4.0 · <a href="assets/EXAMPLE_NOTICES.md" target="_blank" rel="noopener">Attribution and changes</a> · <a href="assets/EasyCom_CC_BY_NC_4.0.txt" target="_blank" rel="noopener">License</a>. Review flags are retained; these examples are not a semantic correctness certification.</p>
+    <div class="rubric-lab" aria-labelledby="rubric-title"><div><p class="section-label">Try the rubric</p><h3 id="rubric-title">A correct answer can receive less Verified credit.</h3><p>For a valid formatted response with an informative rationale, change the scoring labels to see their effect. This calculator illustrates the fixed rubric; it does not run a Judge or score the example above.</p></div><div class="rubric-controls"><label>Answer credit<select id="rubric-answer" aria-label="Answer credit"><option value="1">1 · Correct</option><option value="0.5">0.5 · Partial (open only)</option><option value="0">0 · Incorrect</option></select></label><label>Evidence support<select id="rubric-support" aria-label="Evidence support"><option value="1.2">Strong · ×1.2</option><option value="1">Normal · ×1.0</option><option value="0.8">Weak · ×0.8</option><option value="0.5">Contradicted · ×0.5</option><option value="0">Insufficient · ×0</option></select></label><label>Logical consistency<select id="rubric-logic" aria-label="Logical consistency"><option value="1.2">Fully coherent · ×1.2</option><option value="1">Acceptable · ×1.0</option><option value="0.8">Weak · ×0.8</option><option value="0.5">Contradictory · ×0.5</option><option value="0">Unevaluable · ×0</option></select></label></div><div class="rubric-result" aria-live="polite"><div><span>Raw credit</span><output id="rubric-raw">100.00%</output></div><div><span>Verified credit</span><output id="rubric-verified">100.00%</output></div><p id="rubric-formula">1 × 1.2 × 1.2 ÷ 1.44 = 1.0000</p></div><p class="rubric-note">Verified = answer credit × rationale coverage × evidence support × logical consistency ÷ 1.44. This illustration fixes coverage at present (×1). Invalid final-format responses receive zero answer credit. <a href="https://github.com/psychemme/PsycheMME/blob/main/docs/EVALUATION.md" target="_blank" rel="noopener">Full scoring contract ↗</a></p></div>
   </div>
 </section>
 <section class="section results" id="results" aria-labelledby="results-title">
@@ -214,10 +258,10 @@
       <div><p class="section-label">05 / Release</p><h2 id="resources-title">Code, models, data and evaluation logs</h2></div>
       <p class="section-intro">Selected code, a text benchmark subset, paper model adapters, and evaluation logs are available through the anonymous project account.</p>
     </div>
-    <div class="resource-list"><div class="resource-item" data-resource="code" data-resource-label="Code" aria-disabled="true"><span class="resource-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 7-5 5 5 5m8-10 5 5-5 5m-3-13-2 20"/></svg></span><span class="resource-name">Code</span><span class="resource-description">Installable inference, Judge and scoring tools; frozen score-factor replay.</span><span class="resource-status">Link pending</span></div>
-<div class="resource-item" data-resource="models" data-resource-label="Trained Models" aria-disabled="true"><span class="resource-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 9 5v10l-9 5-9-5V7zM3 7l9 5 9-5M12 12v10"/></svg></span><span class="resource-name">Trained Models</span><span class="resource-description">Exact SFT458 and GRPO-Step32 LoRA adapters, with pinned base weights and paper configurations.</span><span class="resource-status">Link pending</span></div>
-<div class="resource-item" data-resource="dataset" data-resource-label="Dataset" aria-disabled="true"><span class="resource-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 4 16 4 16 0V5M4 12c0 4 16 4 16 0"/></svg></span><span class="resource-name">Dataset</span><span class="resource-description">78 text questions with references and transcripts; source locators for 630 video episodes.</span><span class="resource-status">Link pending</span></div>
-<div class="resource-item" data-resource="logs" data-resource-label="Evaluation Logs" aria-disabled="true"><span class="resource-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18H6zM9 7h6M9 12h6M9 17h4"/></svg></span><span class="resource-name">Evaluation Logs</span><span class="resource-description">All 19,000 score-factor records and scores; 18 detailed prediction/Judge records.</span><span class="resource-status">Link pending</span></div>
+    <div class="resource-list"><a class="resource-item" data-resource="code" href="https://github.com/psychemme/PsycheMME" target="_blank" rel="noopener"><span class="resource-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 7-5 5 5 5m8-10 5 5-5 5m-3-13-2 20"/></svg></span><span class="resource-name">Code</span><span class="resource-description">Installable inference, Judge and scoring tools; frozen score-factor replay.</span><span class="resource-status">Open resource ↗</span></a>
+<a class="resource-item" data-resource="models" href="https://huggingface.co/psychemme" target="_blank" rel="noopener"><span class="resource-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 9 5v10l-9 5-9-5V7zM3 7l9 5 9-5M12 12v10"/></svg></span><span class="resource-name">Trained Models</span><span class="resource-description">Exact SFT458 and GRPO-Step32 LoRA adapters, with pinned base weights and paper configurations.</span><span class="resource-status">Open resource ↗</span></a>
+<a class="resource-item" data-resource="dataset" href="https://huggingface.co/datasets/psychemme/PsycheMME" target="_blank" rel="noopener"><span class="resource-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 4 16 4 16 0V5M4 12c0 4 16 4 16 0"/></svg></span><span class="resource-name">Dataset</span><span class="resource-description">78 text questions with references and transcripts; source locators for 630 video episodes.</span><span class="resource-status">Open resource ↗</span></a>
+<a class="resource-item" data-resource="logs" href="https://huggingface.co/datasets/psychemme/PsycheMME/tree/main/results" target="_blank" rel="noopener"><span class="resource-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18H6zM9 7h6M9 12h6M9 17h4"/></svg></span><span class="resource-name">Evaluation Logs</span><span class="resource-description">All 19,000 score-factor records and scores; 18 detailed prediction/Judge records.</span><span class="resource-status">Open resource ↗</span></a>
 </div>
     <p class="availability-note">The release includes selected core code, 78 text questions, source locators for all 630 episodes, two paper LoRA adapters, and complete main-table numeric results. Videos remain at their original sources.</p>
   </div>

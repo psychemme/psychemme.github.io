@@ -1,0 +1,637 @@
+{
+  "data_revision": "219670bbf579bb2b9bba6c278115f4e8b06d64f0",
+  "selection": "First released record in file order for each capability; not chosen by model performance.",
+  "license": "CC BY-NC 4.0 (EasyCom-derived text)",
+  "examples": [
+    {
+      "input": {
+        "category": "G",
+        "episode_id": "E0287",
+        "media_id": "video/E0287.mp4",
+        "memory_context": null,
+        "memory_dependency": null,
+        "options": [
+          "the person sitting on the right",
+          "the person sitting on the left",
+          "the person with dreadlocks",
+          "the person in the grey shirt",
+          "the person in the plaid shirt",
+          "the person in the grey polo",
+          "the person with short hair",
+          "the person with glasses and a beard",
+          "the person standing in the background"
+        ],
+        "question": "During the segment from 12.3-17.0s, which person asks about the other's clientele?",
+        "question_id": "Q0851",
+        "source_dataset": "EasyCom",
+        "task_type": "single_choice"
+      },
+      "reference": {
+        "answer_indices": [
+          4
+        ],
+        "answers": [
+          "the person in the plaid shirt"
+        ],
+        "category": "G",
+        "episode_id": "E0287",
+        "evidence": [
+          {
+            "content": "P2 is the man in the plaid shirt and glasses seated on the right side of the table.",
+            "subject": "P2",
+            "time": [
+              0.0,
+              60.0
+            ],
+            "time_in_video": true,
+            "time_offset": 0.0
+          },
+          {
+            "content": "P2 asks P1: 'Do you see yourself dealing with more residential or commercial clientele?'",
+            "subject": "P2",
+            "time": [
+              12.3,
+              17.0
+            ],
+            "time_in_video": true,
+            "time_offset": 0.0
+          },
+          {
+            "content": "P2 confirms he is a high school teacher at [WORKPLACE] in [LOCATION], teaching ninth grade science and math.",
+            "subject": "P2",
+            "time": [
+              32.95,
+              46.75
+            ],
+            "time_in_video": true,
+            "time_offset": 0.0
+          }
+        ],
+        "media_id": "video/E0287.mp4",
+        "memory_context": null,
+        "memory_dependency": null,
+        "options": [
+          "the person sitting on the right",
+          "the person sitting on the left",
+          "the person with dreadlocks",
+          "the person in the grey shirt",
+          "the person in the plaid shirt",
+          "the person in the grey polo",
+          "the person with short hair",
+          "the person with glasses and a beard",
+          "the person standing in the background"
+        ],
+        "question": "During the segment from 12.3-17.0s, which person asks about the other's clientele?",
+        "question_id": "Q0851",
+        "reasoning_chain": null,
+        "reference_answer": "",
+        "source_dataset": "EasyCom",
+        "task_type": "single_choice"
+      },
+      "review_status": {
+        "question_id": "Q0851",
+        "inherited_flag_count": 0,
+        "manual_review_signals": [],
+        "semantic_video_review_complete": false
+      }
+    },
+    {
+      "input": {
+        "category": "W",
+        "episode_id": "E0284",
+        "media_id": "video/E0284.mp4",
+        "memory_context": null,
+        "memory_dependency": null,
+        "options": [
+          "They appear frustrated and cross their arms tightly.",
+          "They shift from passive waiting to smiling and looking engaged.",
+          "They look bored and start checking their phones.",
+          "They stand up and move away from the table.",
+          "They become visibly confused and look away from the card.",
+          "They remain completely neutral and do not change their posture.",
+          "They start laughing loudly and leaning back in their chairs.",
+          "They look at each other and whisper without smiling."
+        ],
+        "question": "How do the participants' emotional states change after the card is presented?",
+        "question_id": "Q0351",
+        "source_dataset": "EasyCom",
+        "task_type": "single_choice"
+      },
+      "reference": {
+        "answer_indices": [
+          1
+        ],
+        "answers": [
+          "They shift from passive waiting to smiling and looking engaged."
+        ],
+        "category": "W",
+        "episode_id": "E0284",
+        "evidence": [
+          {
+            "content": "P1 shifts from resting his head to leaning back, smiling, and looking engaged.",
+            "evidence_id": null,
+            "memory_evidence_role": null,
+            "subject": "P1",
+            "time": [
+              21,
+              60
+            ]
+          },
+          {
+            "content": "P2 shifts from a neutral posture to resting their chin on their hand and smiling.",
+            "evidence_id": null,
+            "memory_evidence_role": null,
+            "subject": "P2",
+            "time": [
+              23,
+              60
+            ]
+          }
+        ],
+        "media_id": "video/E0284.mp4",
+        "memory_context": null,
+        "memory_dependency": null,
+        "options": [
+          "They appear frustrated and cross their arms tightly.",
+          "They shift from passive waiting to smiling and looking engaged.",
+          "They look bored and start checking their phones.",
+          "They stand up and move away from the table.",
+          "They become visibly confused and look away from the card.",
+          "They remain completely neutral and do not change their posture.",
+          "They start laughing loudly and leaning back in their chairs.",
+          "They look at each other and whisper without smiling."
+        ],
+        "question": "How do the participants' emotional states change after the card is presented?",
+        "question_id": "Q0351",
+        "reasoning_chain": [
+          "W"
+        ],
+        "reference_answer": null,
+        "source_dataset": "EasyCom",
+        "task_type": "single_choice"
+      },
+      "review_status": {
+        "question_id": "Q0351",
+        "inherited_flag_count": 0,
+        "manual_review_signals": [],
+        "semantic_video_review_complete": false
+      }
+    },
+    {
+      "input": {
+        "category": "N",
+        "episode_id": "E0284",
+        "media_id": "video/E0284.mp4",
+        "memory_context": null,
+        "memory_dependency": null,
+        "options": [
+          "PREVENTIVE_INTERVENTION",
+          "INTERVENE_NOW",
+          "OFFER_DIRECTLY",
+          "DEESCALATE",
+          "REFER_TO_OTHER",
+          "WAIT_AND_OBSERVE",
+          "NO_INTERVENTION",
+          "ASK_FIRST",
+          "CORRECTIVE_INTERVENTION",
+          "IGNORE_HESITATION"
+        ],
+        "question": "Given the person's uncertainty regarding the puzzle rules, what intervention is appropriate?",
+        "question_id": "Q0876",
+        "source_dataset": "EasyCom",
+        "task_type": "single_choice"
+      },
+      "reference": {
+        "answer_indices": [
+          7
+        ],
+        "answers": [
+          "ASK_FIRST"
+        ],
+        "category": "N",
+        "episode_id": "E0284",
+        "evidence": [
+          {
+            "content": "P2 hesitates and seeks clarification about the rules of the puzzle.",
+            "subject": "P2",
+            "time": [
+              19.75,
+              24.2
+            ],
+            "time_in_video": true,
+            "time_offset": 0.0
+          }
+        ],
+        "media_id": "video/E0284.mp4",
+        "memory_context": null,
+        "memory_dependency": null,
+        "options": [
+          "PREVENTIVE_INTERVENTION",
+          "INTERVENE_NOW",
+          "OFFER_DIRECTLY",
+          "DEESCALATE",
+          "REFER_TO_OTHER",
+          "WAIT_AND_OBSERVE",
+          "NO_INTERVENTION",
+          "ASK_FIRST",
+          "CORRECTIVE_INTERVENTION",
+          "IGNORE_HESITATION"
+        ],
+        "question": "Given the person's uncertainty regarding the puzzle rules, what intervention is appropriate?",
+        "question_id": "Q0876",
+        "reasoning_chain": null,
+        "reference_answer": "",
+        "source_dataset": "EasyCom",
+        "task_type": "single_choice"
+      },
+      "review_status": {
+        "question_id": "Q0876",
+        "inherited_flag_count": 0,
+        "manual_review_signals": [],
+        "semantic_video_review_complete": false
+      }
+    },
+    {
+      "input": {
+        "category": "T",
+        "episode_id": "E0284",
+        "media_id": "video/E0284.mp4",
+        "memory_context": null,
+        "memory_dependency": null,
+        "options": [
+          "0.0s-10.0s",
+          "10.0s-23.0s",
+          "23.0s-27.0s",
+          "27.0s-60.0s"
+        ],
+        "question": "When is the appropriate time for the EGO_AGENT to transition from waiting to initiating the task?",
+        "question_id": "Q0368",
+        "source_dataset": "EasyCom",
+        "task_type": "single_choice"
+      },
+      "reference": {
+        "answer_indices": [
+          2
+        ],
+        "answers": [
+          "23.0s-27.0s"
+        ],
+        "category": "T",
+        "episode_id": "E0284",
+        "evidence": [
+          {
+            "content": "The ego-agent presents the card, marking the transition from waiting to task initiation.",
+            "evidence_id": null,
+            "memory_evidence_role": null,
+            "subject": "EGO_AGENT",
+            "time": [
+              23,
+              27
+            ]
+          }
+        ],
+        "media_id": "video/E0284.mp4",
+        "memory_context": null,
+        "memory_dependency": null,
+        "options": [
+          "0.0s-10.0s",
+          "10.0s-23.0s",
+          "23.0s-27.0s",
+          "27.0s-60.0s"
+        ],
+        "question": "When is the appropriate time for the EGO_AGENT to transition from waiting to initiating the task?",
+        "question_id": "Q0368",
+        "reasoning_chain": [
+          "T"
+        ],
+        "reference_answer": null,
+        "source_dataset": "EasyCom",
+        "task_type": "single_choice",
+        "timing_numeric_only_audit": {
+          "gold_rationale_zh": "冻结证据显示EGO_AGENT在23至27秒呈现卡片，标志着从等待转入任务启动。",
+          "protocol": "timing-four-numeric-disjoint-v2"
+        }
+      },
+      "review_status": {
+        "question_id": "Q0368",
+        "inherited_flag_count": 0,
+        "manual_review_signals": [],
+        "semantic_video_review_complete": false
+      }
+    },
+    {
+      "input": {
+        "category": "S",
+        "episode_id": "E0287",
+        "media_id": "video/E0287.mp4",
+        "memory_context": null,
+        "memory_dependency": null,
+        "options": [],
+        "question": "During the interaction at 23.85-33.0s, what should the EGO_AGENT say to support the group conversation flow?",
+        "question_id": "Q0809",
+        "source_dataset": "EasyCom",
+        "task_type": "open"
+      },
+      "reference": {
+        "answer_indices": [],
+        "answers": [],
+        "category": "S",
+        "episode_id": "E0287",
+        "evidence": [
+          {
+            "content": "P1 answers that he operates in the [LOCATION] area, including [LOCATION] and [LOCATION].",
+            "subject": "P1",
+            "time": [
+              23.85,
+              29.35
+            ],
+            "time_in_video": true,
+            "time_offset": 0.0
+          },
+          {
+            "content": "EGO_AGENT says 'Nice' and then asks P2: 'And [PERSON_1], you're a schoolteacher?'",
+            "subject": "EGO_AGENT",
+            "time": [
+              26.2,
+              33.0
+            ],
+            "time_in_video": true,
+            "time_offset": 0.0
+          },
+          {
+            "content": "EGO_AGENT responds to P1's answer with 'Nice' and then initiates a new topic by asking P2 about his profession.",
+            "subject": "EGO_AGENT",
+            "time": [
+              26.2,
+              33.0
+            ],
+            "time_in_video": true,
+            "time_offset": 0.0
+          }
+        ],
+        "media_id": "video/E0287.mp4",
+        "memory_context": null,
+        "memory_dependency": null,
+        "options": [],
+        "question": "During the interaction at 23.85-33.0s, what should the EGO_AGENT say to support the group conversation flow?",
+        "question_id": "Q0809",
+        "reasoning_chain": null,
+        "reference_answer": "The EGO_AGENT's strategy supports the conversation flow by first validating the first speaker's input to maintain rapport, then explicitly pivoting to the second speaker to ensure balanced participation. This prevents the conversation from becoming a one-on-one interview and integrates all participants into the group dynamic.",
+        "source_dataset": "EasyCom",
+        "task_type": "open"
+      },
+      "review_status": {
+        "question_id": "Q0809",
+        "inherited_flag_count": 0,
+        "manual_review_signals": [],
+        "semantic_video_review_complete": false
+      }
+    },
+    {
+      "input": {
+        "category": "A",
+        "episode_id": "E0291",
+        "media_id": "video/E0291.mp4",
+        "memory_context": null,
+        "memory_dependency": null,
+        "options": [
+          "GUIDE",
+          "WAVE",
+          "ALERT",
+          "BLOCK",
+          "DEMONSTRATE",
+          "ASSIST",
+          "RETRIEVE",
+          "REQUEST",
+          "OFFER",
+          "COMFORT",
+          "TERMINATE"
+        ],
+        "question": "During 52.7-56.9s, which embodied action should the EGO_AGENT take?",
+        "question_id": "Q0704",
+        "source_dataset": "EasyCom",
+        "task_type": "single_choice"
+      },
+      "reference": {
+        "answer_indices": [
+          0
+        ],
+        "answers": [
+          "GUIDE"
+        ],
+        "category": "A",
+        "episode_id": "E0291",
+        "evidence": [
+          {
+            "content": "EGO_AGENT confirms the correct guess and explicitly passes the turn to P2.",
+            "evidence_id": "E26",
+            "memory_evidence_role": null,
+            "subject": "EGO_AGENT",
+            "time": [
+              52.7,
+              56.9
+            ],
+            "time_in_video": true,
+            "time_offset": 0.0
+          }
+        ],
+        "media_id": "video/E0291.mp4",
+        "memory_context": null,
+        "memory_dependency": null,
+        "options": [
+          "GUIDE",
+          "WAVE",
+          "ALERT",
+          "BLOCK",
+          "DEMONSTRATE",
+          "ASSIST",
+          "RETRIEVE",
+          "REQUEST",
+          "OFFER",
+          "COMFORT",
+          "TERMINATE"
+        ],
+        "question": "During 52.7-56.9s, which embodied action should the EGO_AGENT take?",
+        "question_id": "Q0704",
+        "reasoning_chain": [],
+        "reference_answer": "",
+        "source_dataset": "EasyCom",
+        "task_type": "single_choice"
+      },
+      "review_status": {
+        "question_id": "Q0704",
+        "inherited_flag_count": 0,
+        "manual_review_signals": [],
+        "semantic_video_review_complete": false
+      }
+    },
+    {
+      "input": {
+        "category": "M",
+        "episode_id": "E0288",
+        "media_id": "video/E0288.mp4",
+        "memory_context": null,
+        "memory_dependency": null,
+        "options": [
+          "Choosing a different door after a goat is shown.",
+          "Asking the host to reveal the prize behind the chosen door.",
+          "Calculating the exact probability using Bayes theorem.",
+          "Sticking with the initial choice to avoid risk.",
+          "Opening the door with the goat immediately to end the game.",
+          "Refusing to switch doors under any circumstances.",
+          "Asking the host to open the door with the car.",
+          "Selecting a door based on its physical color rather than probability.",
+          "Ignoring the host's action and picking a random door again.",
+          "Demanding that the host reveal all doors before making a choice.",
+          "Staying with the original door because the odds are now 50/50."
+        ],
+        "question": "Based on the discussion of the Monty Hall problem, what conclusion did the group reach regarding the optimal strategy?",
+        "question_id": "Q0860",
+        "source_dataset": "EasyCom",
+        "task_type": "single_choice"
+      },
+      "reference": {
+        "answer_indices": [
+          0
+        ],
+        "answers": [
+          "Choosing a different door after a goat is shown."
+        ],
+        "category": "M",
+        "episode_id": "E0288",
+        "evidence": [
+          {
+            "content": "Discussion of the Monty Hall problem: switching doors increases probability, Bayes theorem, seeing a goat, changing to another door.",
+            "subject": null,
+            "time": [
+              0.1,
+              21.7
+            ],
+            "time_in_video": true,
+            "time_offset": 0.0
+          },
+          {
+            "content": "Summary of Monty Hall: pick one, see goat behind another, change to another door.",
+            "subject": null,
+            "time": [
+              21.8,
+              31.6
+            ],
+            "time_in_video": true,
+            "time_offset": 0.0
+          },
+          {
+            "content": "Transition to 'heaven and hell doors' puzzle.",
+            "subject": null,
+            "time": [
+              32.5,
+              37.7
+            ],
+            "time_in_video": true,
+            "time_offset": 0.0
+          }
+        ],
+        "media_id": "video/E0288.mp4",
+        "memory_context": null,
+        "memory_dependency": null,
+        "options": [
+          "Choosing a different door after a goat is shown.",
+          "Asking the host to reveal the prize behind the chosen door.",
+          "Calculating the exact probability using Bayes theorem.",
+          "Sticking with the initial choice to avoid risk.",
+          "Opening the door with the goat immediately to end the game.",
+          "Refusing to switch doors under any circumstances.",
+          "Asking the host to open the door with the car.",
+          "Selecting a door based on its physical color rather than probability.",
+          "Ignoring the host's action and picking a random door again.",
+          "Demanding that the host reveal all doors before making a choice.",
+          "Staying with the original door because the odds are now 50/50."
+        ],
+        "question": "Based on the discussion of the Monty Hall problem, what conclusion did the group reach regarding the optimal strategy?",
+        "question_id": "Q0860",
+        "reasoning_chain": null,
+        "reference_answer": "",
+        "source_dataset": "EasyCom",
+        "task_type": "single_choice"
+      },
+      "review_status": {
+        "question_id": "Q0860",
+        "inherited_flag_count": 0,
+        "manual_review_signals": [],
+        "semantic_video_review_complete": false
+      }
+    },
+    {
+      "input": {
+        "category": "R",
+        "episode_id": "E0299",
+        "media_id": "video/E0299.mp4",
+        "memory_context": null,
+        "memory_dependency": null,
+        "options": [
+          "Answer the question directly to satisfy curiosity.",
+          "Intervene immediately to discourage the action and assess safety.",
+          "Ask the other participants for their opinion on the object.",
+          "Encourage the user to lick the object to test the hypothesis.",
+          "Provide a detailed chemical analysis of the object's surface.",
+          "Laugh at the question and change the subject.",
+          "Wait five minutes before responding to see if the user acts.",
+          "Record the question for later review without intervening.",
+          "Tell the user that licking objects is a common game rule."
+        ],
+        "question": "During 56.5-57.9s, what is the most appropriate response strategy for the EGO_AGENT?",
+        "question_id": "Q0827",
+        "source_dataset": "EasyCom",
+        "task_type": "single_choice"
+      },
+      "reference": {
+        "answer_indices": [
+          1
+        ],
+        "answers": [
+          "Intervene immediately to discourage the action and assess safety."
+        ],
+        "category": "R",
+        "episode_id": "E0299",
+        "evidence": [
+          {
+            "content": "2: Would it hurt me if I licked it?",
+            "subject": null,
+            "time": [
+              56.5,
+              57.9
+            ],
+            "time_in_video": true,
+            "time_offset": 0.0
+          }
+        ],
+        "media_id": "video/E0299.mp4",
+        "memory_context": null,
+        "memory_dependency": null,
+        "options": [
+          "Answer the question directly to satisfy curiosity.",
+          "Intervene immediately to discourage the action and assess safety.",
+          "Ask the other participants for their opinion on the object.",
+          "Encourage the user to lick the object to test the hypothesis.",
+          "Provide a detailed chemical analysis of the object's surface.",
+          "Laugh at the question and change the subject.",
+          "Wait five minutes before responding to see if the user acts.",
+          "Record the question for later review without intervening.",
+          "Tell the user that licking objects is a common game rule."
+        ],
+        "question": "During 56.5-57.9s, what is the most appropriate response strategy for the EGO_AGENT?",
+        "question_id": "Q0827",
+        "reasoning_chain": null,
+        "reference_answer": "The agent should intervene immediately to discourage the action and assess safety.",
+        "source_dataset": "EasyCom",
+        "task_type": "single_choice"
+      },
+      "review_status": {
+        "question_id": "Q0827",
+        "inherited_flag_count": 0,
+        "manual_review_signals": [],
+        "semantic_video_review_complete": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+/* PsycheMME palette, with a quieter hierarchy and a light plotting grid. */
+.hero { position: relative; isolation: isolate; overflow: hidden; padding-bottom: 36px; background: linear-gradient(125deg,#edf7f4 0%,#f5faf8 55%,#f7f2fa 100%); }
+.hero::before { content: ''; position: absolute; inset: 0; z-index: -1; pointer-events: none; background-image: linear-gradient(rgba(32,116,121,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(32,116,121,.055) 1px,transparent 1px); background-size: 42px 42px; mask-image: linear-gradient(#000 0%,rgba(0,0,0,.75) 60%,transparent 100%); }
+.hero h1 { max-width: 1140px; margin-inline: auto; line-height: 1.16; letter-spacing: -.022em; }
+.anonymous-submission { font-size: 13px; font-weight: 600; margin-top: 20px; }
+.hero-copy { max-width: 960px; margin-top: 25px; font-size: 16.5px; line-height: 1.78; color: #3e5659; }
+.hero-copy strong { color: #24595d; font-weight: 700; }
+.hero-finding { max-width: 960px; margin: 13px auto 0; color: #607173; text-align: left; font-size: 14px; line-height: 1.7; }
+.hero-actions { margin-top: 26px; }
+.hero-actions .button { transition: transform .18s ease,box-shadow .18s ease,background .18s ease,border-color .18s ease; }
+.hero-actions .button:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(30,86,80,.10); }
+.hero-actions .button:active { transform: translateY(0); }
+.platform-mark { width: 20px; height: 20px; object-fit: contain; flex: 0 0 20px; }
+.resource-icon .platform-mark { width: 28px; height: 28px; }
+.section-label { letter-spacing: .08em; }
+.section-header { margin-bottom: 32px; }
+.overview .questions-grid { gap: 20px; }
+.question-item { box-shadow: none; background: #fff; }
+.case-examples { margin-top: 46px; padding-top: 35px; border-top: 1px solid var(--line); }
+.case-examples .section-header { grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 36px; align-items: end; }
+.case-examples h3#examples-title { font: 700 28px/1.2 var(--serif); letter-spacing: -.02em; }
+.case-examples .section-intro { font-size: 14px; line-height: 1.7; }
+.sample-toolbar { gap: 12px 16px; padding: 15px 18px; border: 1px solid var(--line); border-radius: 13px; background: #f4f9f7; }
+.sample-toolbar label { font-size: 12px; color: var(--muted); }
+.sample-card { border-radius: 15px; box-shadow: 0 3px 14px rgba(30,86,80,.025); }
+.evaluator-card { background: #fcfaff; }
+.sample-card h3 { font-weight: 600; }
+.sample-options { line-height: 1.7; }
+.sample-options li::marker { font-weight: 650; color: #71958d; }
+.sample-options li { padding-left: 7px; }
+.sample-context { font-size: 12px; }
+.sample-license { font-size: 11px; line-height: 1.8; }
+.sample-presentation-note { margin-top: 12px; font-size: 12px; color: #536f71; }
+.case-note h3 { font-size: 17px; }
+.case-note p { font-size: 14px; }
+.case-notes { gap: 20px; }
+.rubric-lab { background: linear-gradient(115deg,#f7fbf9,#fcfaff); border-color: #d7e6e0; box-shadow: none; }
+.rubric-lab h3 { max-width: 410px; font-size: 25px; line-height: 1.22; }
+.rubric-lab .rubric-controls { gap: 12px; }
+.rubric-result { border-color: #d7e6e0; }
+.rubric-result output { font-variant-numeric: tabular-nums; }
+.vector-link { opacity: .8; font-size: 11px; }
+.vector-link:hover { opacity: 1; }
+
+/* Custom select UI; the hidden native select supplies values and change events. */
+.custom-select { position: relative; display: block; min-width: 0; width: 100%; }
+.select-trigger { display: flex; align-items: center; gap: 9px; width: 100%; min-height: 44px; padding: 11px 13px; border: 1px solid #cbdcd6; border-radius: 10px; color: var(--ink); background: rgba(255,255,255,.96); box-shadow: 0 1px 3px rgba(30,86,80,.03); text-align: left; font-size: 13px; line-height: 1.5; transition: background .16s ease,border-color .16s ease,box-shadow .16s ease; }
+.select-trigger:hover { border-color: #96bcb2; background: #fcfefd; }
+.select-trigger:focus-visible { outline: 0; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(32,116,121,.13); }
+.is-open .select-trigger { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(32,116,121,.10); }
+.select-caption { min-width: 0; flex: 1; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.select-detail { font: 11px/1.5 var(--mono); color: #6f8984; }
+.select-chevron { width: 7px; height: 7px; margin: -4px 2px 0 3px; border-right: 1.5px solid #71948c; border-bottom: 1.5px solid #71948c; transform: rotate(45deg); transition: transform .16s ease; flex-shrink: 0; }
+.is-open .select-chevron { transform: translateY(3px) rotate(225deg); }
+.select-listbox { position: absolute; z-index: 45; inset: calc(100% + 8px) 0 auto; list-style: none; max-height: 272px; overflow-y: auto; overscroll-behavior: contain; margin: 0; padding: 6px; border: 1px solid #d5e3dd; border-radius: 12px; background: #fff; box-shadow: 0 14px 36px rgba(31,62,61,.14),0 2px 7px rgba(31,62,61,.05); scrollbar-width: thin; scrollbar-color: #c2d8ce transparent; animation: select-in .14s ease-out both; cursor: default; }
+.custom-select[data-placement="up"] .select-listbox { inset: auto 0 calc(100% + 8px); }
+.select-option { display: grid; grid-template-columns: minmax(0,1fr) auto 14px; gap: 8px; align-items: center; min-height: 38px; padding: 9px 10px; border-radius: 7px; color: #4a6465; font-size: 12.5px; font-weight: 400; line-height: 1.5; }
+.select-option.is-active { background: #f0f7f3; color: var(--accent-dark); }
+.select-option[aria-selected="true"] { background: #e7f3ee; color: var(--accent-dark); font-weight: 600; }
+.option-detail { color: #7a928c; font: 10px/1.5 var(--mono); }
+.option-check { color: var(--accent); visibility: hidden; }
+[aria-selected="true"] > .option-check { visibility: visible; }
+.sample-toolbar .custom-select { width: min(340px,100%); }
+@keyframes select-in { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: translateY(0); } }
+@media (max-width: 800px) {
+  .case-examples .section-header { grid-template-columns: 1fr; gap: 14px; }
+  .hero-copy { font-size: 15.5px; }
+  .hero-finding { font-size: 13px; }
+  .rubric-lab h3 { font-size: 23px; }
+}
+@media (max-width: 620px) {
+  .hero { padding-bottom: 32px; }
+  .hero::before { background-size: 32px 32px; }
+  .hero h1 { letter-spacing: -.02em; }
+  .hero-copy { font-size: 15px; line-height: 1.75; margin-top: 22px; }
+  .hero-finding { font-size: 12.5px; }
+  .anonymous-submission { font-size: 12px; }
+  .hero-actions { margin-top: 22px; }
+  .platform-mark { width: 18px; height: 18px; flex-basis: 18px; }
+  .sample-toolbar { padding: 14px; }
+  .sample-toolbar .custom-select { width: 100%; }
+  .case-examples { margin-top: 30px; padding-top: 28px; }
+  .case-examples h3#examples-title { font-size: 25px; }
+  .rubric-lab { padding: 20px; }
+  .rubric-controls label { gap: 7px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .select-listbox { animation: none; }
+  .hero-actions .button:hover { transform: none; }
+}

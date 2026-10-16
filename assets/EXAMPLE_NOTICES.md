@@ -1,6 +1,6 @@
 # Released website examples
 
-Eight text records copied from the public PsycheMME review subset, selected as the first record in each capability in original file order. Question/reference contents and review flags are preserved; no media is copied. These are redacted public copies, not the original frozen evaluation inputs.
+Eight text records copied from the public PsycheMME review subset, selected for explicit observable cues, temporal/history links and alignment with the capability definitions. Question/reference contents and review flags are preserved; no media is copied. These are redacted public copies, not the original frozen evaluation inputs.
 
 # Source attribution and permissions
 
@@ -12,3 +12,7 @@ EasyCom: An Augmented Reality Dataset to Support Algorithms for Easy Communicati
 
 The 70 EasyCom-derived questions, associated references and 40 episode transcripts in `dataset/text_subset/` are distributed under CC BY-NC 4.0. Changes include question/annotation creation, transcription, ID pseudonymization and text redaction. Noncommercial use and original attribution remain required. No endorsement is implied.
 
+
+## Website selection update (2026-10-17)
+
+Selected IDs: Q0348, Q0351, Q0876, Q0368, Q0453, Q0749, Q0609, Q0829. No model performance was used. Compared with the earlier file-order preview, G now illustrates a shared activity, A a physical orientation/space-making policy, M an explicit HISTORY/CURRENT link, S a quoted clarification, and R a quoted warning. Exact public inputs/references and their review metadata are preserved; neither benchmark answers nor paper results were changed. This is a text-based presentation review, not a new video-level annotation audit.

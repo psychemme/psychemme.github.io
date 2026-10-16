@@ -33,7 +33,7 @@
     const marker = window.scrollY + 160;
     let active = null;
     sections.forEach((section, index) => {
-      if (section.offsetTop <= marker) active = index;
+      if (section.getBoundingClientRect().top + window.scrollY <= marker) active = index;
     });
     navLinks.forEach((link, index) => {
       if (index === active) link.setAttribute('aria-current', 'location');

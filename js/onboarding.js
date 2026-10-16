@@ -74,6 +74,7 @@
         publicPanel.append(options);
       } else publicPanel.append(node('p', 'sample-context', 'Open answer · respond in natural language.'));
       if (input.memory_context) publicPanel.append(node('p', 'sample-context', `Public memory: ${input.memory_context}`));
+      if (sample.presentation_note) publicPanel.append(node('p', 'sample-presentation-note', sample.presentation_note));
       publicPanel.append(node('p', 'sample-context', `Episode ${input.episode_id}. Text preview only; original video and ASR are required for actual evaluation.`));
       const raw = node('details', 'sample-json');
       raw.append(node('summary', '', 'Inspect the model-input JSON'), node('pre', '', JSON.stringify(input, null, 2)));

@@ -1,28 +1,28 @@
 {
   "data_revision": "219670bbf579bb2b9bba6c278115f4e8b06d64f0",
-  "selection": "First released record in file order for each capability; not chosen by model performance.",
+  "selection": "Task-format illustrations selected for observable cues, explicit temporal/history links and alignment with capability definitions. No model performance was used. These text checks do not certify video-level correctness. Original records and review metadata are preserved.",
+  "selection_revision": "website-20261017",
   "license": "CC BY-NC 4.0 (EasyCom-derived text)",
   "examples": [
     {
       "input": {
         "category": "G",
-        "episode_id": "E0287",
-        "media_id": "video/E0287.mp4",
+        "episode_id": "E0300",
+        "media_id": "video/E0300.mp4",
         "memory_context": null,
         "memory_dependency": null,
         "options": [
-          "the person sitting on the right",
-          "the person sitting on the left",
-          "the person with dreadlocks",
-          "the person in the grey shirt",
-          "the person in the plaid shirt",
-          "the person in the grey polo",
-          "the person with short hair",
-          "the person with glasses and a beard",
-          "the person standing in the background"
+          "They are both sleeping at the table.",
+          "Both individuals are typing on separate laptops.",
+          "They are engaged in a physical exercise routine.",
+          "The person on the left is reading a book while the person on the right writes notes.",
+          "The person on the left is using a laptop while the person on the right observes.",
+          "The person on the right is cooking while the person on the left eats.",
+          "The person on the right is presenting information on a large screen.",
+          "They are playing a board game on the table."
         ],
-        "question": "During the segment from 12.3-17.0s, which person asks about the other's clientele?",
-        "question_id": "Q0851",
+        "question": "What is the primary shared activity involving the person on the left and the person on the right at the beginning of the video?",
+        "question_id": "Q0348",
         "source_dataset": "EasyCom",
         "task_type": "single_choice"
       },
@@ -31,69 +31,61 @@
           4
         ],
         "answers": [
-          "the person in the plaid shirt"
+          "The person on the left is using a laptop while the person on the right observes."
         ],
         "category": "G",
-        "episode_id": "E0287",
+        "episode_id": "E0300",
         "evidence": [
           {
-            "content": "P2 is the man in the plaid shirt and glasses seated on the right side of the table.",
+            "content": "P1 is seated at a table, looking at and interacting with a black laptop with a green logo.",
+            "evidence_id": null,
+            "memory_evidence_role": null,
+            "subject": "P1",
+            "time": [
+              0.0,
+              47.0
+            ]
+          },
+          {
+            "content": "P2 sits with hands clasped on the table, observing P1 and the laptop.",
+            "evidence_id": null,
+            "memory_evidence_role": null,
             "subject": "P2",
             "time": [
               0.0,
-              60.0
-            ],
-            "time_in_video": true,
-            "time_offset": 0.0
-          },
-          {
-            "content": "P2 asks P1: 'Do you see yourself dealing with more residential or commercial clientele?'",
-            "subject": "P2",
-            "time": [
-              12.3,
-              17.0
-            ],
-            "time_in_video": true,
-            "time_offset": 0.0
-          },
-          {
-            "content": "P2 confirms he is a high school teacher at [WORKPLACE] in [LOCATION], teaching ninth grade science and math.",
-            "subject": "P2",
-            "time": [
-              32.95,
-              46.75
-            ],
-            "time_in_video": true,
-            "time_offset": 0.0
+              47.0
+            ]
           }
         ],
-        "media_id": "video/E0287.mp4",
+        "media_id": "video/E0300.mp4",
         "memory_context": null,
         "memory_dependency": null,
         "options": [
-          "the person sitting on the right",
-          "the person sitting on the left",
-          "the person with dreadlocks",
-          "the person in the grey shirt",
-          "the person in the plaid shirt",
-          "the person in the grey polo",
-          "the person with short hair",
-          "the person with glasses and a beard",
-          "the person standing in the background"
+          "They are both sleeping at the table.",
+          "Both individuals are typing on separate laptops.",
+          "They are engaged in a physical exercise routine.",
+          "The person on the left is reading a book while the person on the right writes notes.",
+          "The person on the left is using a laptop while the person on the right observes.",
+          "The person on the right is cooking while the person on the left eats.",
+          "The person on the right is presenting information on a large screen.",
+          "They are playing a board game on the table."
         ],
-        "question": "During the segment from 12.3-17.0s, which person asks about the other's clientele?",
-        "question_id": "Q0851",
-        "reasoning_chain": null,
-        "reference_answer": "",
+        "question": "What is the primary shared activity involving the person on the left and the person on the right at the beginning of the video?",
+        "question_id": "Q0348",
+        "reasoning_chain": [
+          "G"
+        ],
+        "reference_answer": null,
         "source_dataset": "EasyCom",
         "task_type": "single_choice"
       },
       "review_status": {
-        "question_id": "Q0851",
+        "question_id": "Q0348",
         "inherited_flag_count": 0,
         "manual_review_signals": [],
         "semantic_video_review_complete": false
-      }
+      },
+      "presentation_note": "Observable shared activity, with distinct activity alternatives."
     },
     {
       "input": {
@@ -175,7 +167,8 @@
         "inherited_flag_count": 0,
         "manual_review_signals": [],
         "semantic_video_review_complete": false
-      }
+      },
+      "presentation_note": "Change in engagement linked to posture and expression cues."
     },
     {
       "input": {
@@ -249,7 +242,8 @@
         "inherited_flag_count": 0,
         "manual_review_signals": [],
         "semantic_video_review_complete": false
-      }
+      },
+      "presentation_note": "A clarification cue motivates the ASK_FIRST reference."
     },
     {
       "input": {
@@ -317,270 +311,107 @@
         "inherited_flag_count": 0,
         "manual_review_signals": [],
         "semantic_video_review_complete": false
-      }
+      },
+      "presentation_note": "A transition is anchored to an explicit task event and interval."
     },
     {
       "input": {
         "category": "S",
-        "episode_id": "E0287",
-        "media_id": "video/E0287.mp4",
-        "memory_context": null,
-        "memory_dependency": null,
-        "options": [],
-        "question": "During the interaction at 23.85-33.0s, what should the EGO_AGENT say to support the group conversation flow?",
-        "question_id": "Q0809",
-        "source_dataset": "EasyCom",
-        "task_type": "open"
-      },
-      "reference": {
-        "answer_indices": [],
-        "answers": [],
-        "category": "S",
-        "episode_id": "E0287",
-        "evidence": [
-          {
-            "content": "P1 answers that he operates in the [LOCATION] area, including [LOCATION] and [LOCATION].",
-            "subject": "P1",
-            "time": [
-              23.85,
-              29.35
-            ],
-            "time_in_video": true,
-            "time_offset": 0.0
-          },
-          {
-            "content": "EGO_AGENT says 'Nice' and then asks P2: 'And [PERSON_1], you're a schoolteacher?'",
-            "subject": "EGO_AGENT",
-            "time": [
-              26.2,
-              33.0
-            ],
-            "time_in_video": true,
-            "time_offset": 0.0
-          },
-          {
-            "content": "EGO_AGENT responds to P1's answer with 'Nice' and then initiates a new topic by asking P2 about his profession.",
-            "subject": "EGO_AGENT",
-            "time": [
-              26.2,
-              33.0
-            ],
-            "time_in_video": true,
-            "time_offset": 0.0
-          }
-        ],
-        "media_id": "video/E0287.mp4",
-        "memory_context": null,
-        "memory_dependency": null,
-        "options": [],
-        "question": "During the interaction at 23.85-33.0s, what should the EGO_AGENT say to support the group conversation flow?",
-        "question_id": "Q0809",
-        "reasoning_chain": null,
-        "reference_answer": "The EGO_AGENT's strategy supports the conversation flow by first validating the first speaker's input to maintain rapport, then explicitly pivoting to the second speaker to ensure balanced participation. This prevents the conversation from becoming a one-on-one interview and integrates all participants into the group dynamic.",
-        "source_dataset": "EasyCom",
-        "task_type": "open"
-      },
-      "review_status": {
-        "question_id": "Q0809",
-        "inherited_flag_count": 0,
-        "manual_review_signals": [],
-        "semantic_video_review_complete": false
-      }
-    },
-    {
-      "input": {
-        "category": "A",
-        "episode_id": "E0291",
-        "media_id": "video/E0291.mp4",
+        "episode_id": "E0304",
+        "media_id": "video/E0304.mp4",
         "memory_context": null,
         "memory_dependency": null,
         "options": [
-          "GUIDE",
-          "WAVE",
-          "ALERT",
-          "BLOCK",
-          "DEMONSTRATE",
-          "ASSIST",
-          "RETRIEVE",
-          "REQUEST",
-          "OFFER",
+          "VALIDATE",
+          "APOLOGIZE",
+          "DECLINE",
+          "REDIRECT",
+          "ENCOURAGE",
+          "OFFER_HELP",
+          "SET_BOUNDARY",
+          "ASK_CLARIFICATION",
+          "ACKNOWLEDGE",
           "COMFORT",
-          "TERMINATE"
+          "IGNORE"
         ],
-        "question": "During 52.7-56.9s, which embodied action should the EGO_AGENT take?",
-        "question_id": "Q0704",
+        "question": "During 14.1-18.65s, what response strategy does the EGO_AGENT employ?",
+        "question_id": "Q0453",
         "source_dataset": "EasyCom",
         "task_type": "single_choice"
       },
       "reference": {
         "answer_indices": [
-          0
+          7
         ],
         "answers": [
-          "GUIDE"
+          "ASK_CLARIFICATION"
         ],
-        "category": "A",
-        "episode_id": "E0291",
+        "category": "S",
+        "episode_id": "E0304",
         "evidence": [
           {
-            "content": "EGO_AGENT confirms the correct guess and explicitly passes the turn to P2.",
-            "evidence_id": "E26",
-            "memory_evidence_role": null,
+            "content": "EGO_AGENT asks, 'Can he go? Can he be on a mountain and-'",
             "subject": "EGO_AGENT",
             "time": [
-              52.7,
-              56.9
+              14.1,
+              18.65
             ],
             "time_in_video": true,
             "time_offset": 0.0
           }
         ],
-        "media_id": "video/E0291.mp4",
+        "media_id": "video/E0304.mp4",
         "memory_context": null,
         "memory_dependency": null,
         "options": [
-          "GUIDE",
-          "WAVE",
-          "ALERT",
-          "BLOCK",
-          "DEMONSTRATE",
-          "ASSIST",
-          "RETRIEVE",
-          "REQUEST",
-          "OFFER",
+          "VALIDATE",
+          "APOLOGIZE",
+          "DECLINE",
+          "REDIRECT",
+          "ENCOURAGE",
+          "OFFER_HELP",
+          "SET_BOUNDARY",
+          "ASK_CLARIFICATION",
+          "ACKNOWLEDGE",
           "COMFORT",
-          "TERMINATE"
+          "IGNORE"
         ],
-        "question": "During 52.7-56.9s, which embodied action should the EGO_AGENT take?",
-        "question_id": "Q0704",
-        "reasoning_chain": [],
-        "reference_answer": "",
-        "source_dataset": "EasyCom",
-        "task_type": "single_choice"
-      },
-      "review_status": {
-        "question_id": "Q0704",
-        "inherited_flag_count": 0,
-        "manual_review_signals": [],
-        "semantic_video_review_complete": false
-      }
-    },
-    {
-      "input": {
-        "category": "M",
-        "episode_id": "E0288",
-        "media_id": "video/E0288.mp4",
-        "memory_context": null,
-        "memory_dependency": null,
-        "options": [
-          "Choosing a different door after a goat is shown.",
-          "Asking the host to reveal the prize behind the chosen door.",
-          "Calculating the exact probability using Bayes theorem.",
-          "Sticking with the initial choice to avoid risk.",
-          "Opening the door with the goat immediately to end the game.",
-          "Refusing to switch doors under any circumstances.",
-          "Asking the host to open the door with the car.",
-          "Selecting a door based on its physical color rather than probability.",
-          "Ignoring the host's action and picking a random door again.",
-          "Demanding that the host reveal all doors before making a choice.",
-          "Staying with the original door because the odds are now 50/50."
-        ],
-        "question": "Based on the discussion of the Monty Hall problem, what conclusion did the group reach regarding the optimal strategy?",
-        "question_id": "Q0860",
-        "source_dataset": "EasyCom",
-        "task_type": "single_choice"
-      },
-      "reference": {
-        "answer_indices": [
-          0
-        ],
-        "answers": [
-          "Choosing a different door after a goat is shown."
-        ],
-        "category": "M",
-        "episode_id": "E0288",
-        "evidence": [
-          {
-            "content": "Discussion of the Monty Hall problem: switching doors increases probability, Bayes theorem, seeing a goat, changing to another door.",
-            "subject": null,
-            "time": [
-              0.1,
-              21.7
-            ],
-            "time_in_video": true,
-            "time_offset": 0.0
-          },
-          {
-            "content": "Summary of Monty Hall: pick one, see goat behind another, change to another door.",
-            "subject": null,
-            "time": [
-              21.8,
-              31.6
-            ],
-            "time_in_video": true,
-            "time_offset": 0.0
-          },
-          {
-            "content": "Transition to 'heaven and hell doors' puzzle.",
-            "subject": null,
-            "time": [
-              32.5,
-              37.7
-            ],
-            "time_in_video": true,
-            "time_offset": 0.0
-          }
-        ],
-        "media_id": "video/E0288.mp4",
-        "memory_context": null,
-        "memory_dependency": null,
-        "options": [
-          "Choosing a different door after a goat is shown.",
-          "Asking the host to reveal the prize behind the chosen door.",
-          "Calculating the exact probability using Bayes theorem.",
-          "Sticking with the initial choice to avoid risk.",
-          "Opening the door with the goat immediately to end the game.",
-          "Refusing to switch doors under any circumstances.",
-          "Asking the host to open the door with the car.",
-          "Selecting a door based on its physical color rather than probability.",
-          "Ignoring the host's action and picking a random door again.",
-          "Demanding that the host reveal all doors before making a choice.",
-          "Staying with the original door because the odds are now 50/50."
-        ],
-        "question": "Based on the discussion of the Monty Hall problem, what conclusion did the group reach regarding the optimal strategy?",
-        "question_id": "Q0860",
+        "question": "During 14.1-18.65s, what response strategy does the EGO_AGENT employ?",
+        "question_id": "Q0453",
         "reasoning_chain": null,
         "reference_answer": "",
         "source_dataset": "EasyCom",
         "task_type": "single_choice"
       },
       "review_status": {
-        "question_id": "Q0860",
+        "question_id": "Q0453",
         "inherited_flag_count": 0,
         "manual_review_signals": [],
         "semantic_video_review_complete": false
-      }
+      },
+      "presentation_note": "A clarification question has a specific quoted utterance and time window."
     },
     {
       "input": {
-        "category": "R",
-        "episode_id": "E0299",
-        "media_id": "video/E0299.mp4",
+        "category": "A",
+        "episode_id": "E0322",
+        "media_id": "video/E0322.mp4",
         "memory_context": null,
         "memory_dependency": null,
         "options": [
-          "Answer the question directly to satisfy curiosity.",
-          "Intervene immediately to discourage the action and assess safety.",
-          "Ask the other participants for their opinion on the object.",
-          "Encourage the user to lick the object to test the hypothesis.",
-          "Provide a detailed chemical analysis of the object's surface.",
-          "Laugh at the question and change the subject.",
-          "Wait five minutes before responding to see if the user acts.",
-          "Record the question for later review without intervening.",
-          "Tell the user that licking objects is a common game rule."
+          "Turn away from the waiter to continue looking at the other diners.",
+          "Orient towards the waiter and make space on the table for the menu.",
+          "Reach out to grab the menu before the waiter places it.",
+          "Stand up to shake the waiter's hand.",
+          "Stand up abruptly to block the waiter's path while shouting for attention.",
+          "Ignore the waiter completely and continue staring at the floor.",
+          "Throw your napkin onto the table to signal that you are ready to order immediately.",
+          "Turn your back to the waiter and loudly discuss the menu with the person across from you.",
+          "Wave your hands frantically in the air to indicate you do not want a menu.",
+          "Lean forward aggressively to inspect the waiter's uniform before they speak."
         ],
-        "question": "During 56.5-57.9s, what is the most appropriate response strategy for the EGO_AGENT?",
-        "question_id": "Q0827",
+        "question": "During 25–28s, which option best describes the appropriate embodied action or policy?",
+        "question_id": "Q0749",
         "source_dataset": "EasyCom",
         "task_type": "single_choice"
       },
@@ -589,49 +420,227 @@
           1
         ],
         "answers": [
-          "Intervene immediately to discourage the action and assess safety."
+          "Orient towards the waiter and make space on the table for the menu."
         ],
-        "category": "R",
-        "episode_id": "E0299",
+        "category": "A",
+        "episode_id": "E0322",
         "evidence": [
           {
-            "content": "2: Would it hurt me if I licked it?",
+            "content": "Visual: Waiter walks to the table and places menus in front of the diners. The diners look at the waiter and the menus.",
+            "evidence_id": "E2",
+            "memory_evidence_role": null,
             "subject": null,
             "time": [
-              56.5,
-              57.9
+              25,
+              28
             ],
-            "time_in_video": true,
-            "time_offset": 0.0
+            "time_offset": 0
           }
         ],
-        "media_id": "video/E0299.mp4",
+        "media_id": "video/E0322.mp4",
         "memory_context": null,
         "memory_dependency": null,
         "options": [
-          "Answer the question directly to satisfy curiosity.",
-          "Intervene immediately to discourage the action and assess safety.",
-          "Ask the other participants for their opinion on the object.",
-          "Encourage the user to lick the object to test the hypothesis.",
-          "Provide a detailed chemical analysis of the object's surface.",
-          "Laugh at the question and change the subject.",
-          "Wait five minutes before responding to see if the user acts.",
-          "Record the question for later review without intervening.",
-          "Tell the user that licking objects is a common game rule."
+          "Turn away from the waiter to continue looking at the other diners.",
+          "Orient towards the waiter and make space on the table for the menu.",
+          "Reach out to grab the menu before the waiter places it.",
+          "Stand up to shake the waiter's hand.",
+          "Stand up abruptly to block the waiter's path while shouting for attention.",
+          "Ignore the waiter completely and continue staring at the floor.",
+          "Throw your napkin onto the table to signal that you are ready to order immediately.",
+          "Turn your back to the waiter and loudly discuss the menu with the person across from you.",
+          "Wave your hands frantically in the air to indicate you do not want a menu.",
+          "Lean forward aggressively to inspect the waiter's uniform before they speak."
         ],
-        "question": "During 56.5-57.9s, what is the most appropriate response strategy for the EGO_AGENT?",
-        "question_id": "Q0827",
-        "reasoning_chain": null,
-        "reference_answer": "The agent should intervene immediately to discourage the action and assess safety.",
+        "question": "During 25–28s, which option best describes the appropriate embodied action or policy?",
+        "question_id": "Q0749",
+        "reasoning_chain": [
+          "W",
+          "N",
+          "A"
+        ],
+        "reference_answer": "The EGO_AGENT should orient towards the waiter to acknowledge their presence and ensure the table space is clear for the menu placement, facilitating a smooth service interaction.",
         "source_dataset": "EasyCom",
         "task_type": "single_choice"
       },
       "review_status": {
-        "question_id": "Q0827",
+        "question_id": "Q0749",
         "inherited_flag_count": 0,
         "manual_review_signals": [],
         "semantic_video_review_complete": false
-      }
+      },
+      "presentation_note": "Physical orientation and space-making illustrate embodied action."
+    },
+    {
+      "input": {
+        "category": "M",
+        "episode_id": "E0295",
+        "media_id": "video/E0295.mp4",
+        "memory_context": null,
+        "memory_dependency": "The customer explicitly states 'I'll take what you recommended', linking the current order to the waiter's past utterance. The current window alone does not contain the recommendation.",
+        "options": [
+          "Because it was the cheapest item on the menu.",
+          "Because the waiter had personally recommended it earlier.",
+          "Because her friend ordered the burger.",
+          "Because she saw it listed first on the menu.",
+          "Because she wanted to try the most expensive dish on the menu.",
+          "Because the steak was the only item left in the kitchen.",
+          "Because she was allergic to all other meats listed.",
+          "Because the restaurant was running a special promotion on steak that day.",
+          "Because she saw a celebrity eating the same dish on social media.",
+          "Because the waiter mentioned it was the chef's personal favorite.",
+          "Because she wanted to order something different from her friend's choice."
+        ],
+        "question": "Why did the customer in the yellow shirt specifically order the 'delicious steak'?",
+        "question_id": "Q0609",
+        "source_dataset": "EasyCom",
+        "task_type": "single_choice"
+      },
+      "reference": {
+        "answer_indices": [
+          1
+        ],
+        "answers": [
+          "Because the waiter had personally recommended it earlier."
+        ],
+        "category": "M",
+        "episode_id": "E0295",
+        "evidence": [
+          {
+            "content": "Waiter (P1) says: 'I, personally, am a huge fan of the delicious steak. I find it rather delicious.'",
+            "evidence_id": "H1",
+            "memory_evidence_role": "HISTORY",
+            "subject": null,
+            "time": [
+              13.2,
+              17.0
+            ],
+            "time_offset": 0
+          },
+          {
+            "content": "Customer (P3) says: 'Oh gosh, yeah! I- I'll take what you recommended, that delicious steak!'",
+            "evidence_id": "C1",
+            "memory_evidence_role": "CURRENT",
+            "subject": null,
+            "time": [
+              43.0,
+              54.1
+            ],
+            "time_offset": 0
+          }
+        ],
+        "media_id": "video/E0295.mp4",
+        "memory_context": null,
+        "memory_dependency": "The customer explicitly states 'I'll take what you recommended', linking the current order to the waiter's past utterance. The current window alone does not contain the recommendation.",
+        "options": [
+          "Because it was the cheapest item on the menu.",
+          "Because the waiter had personally recommended it earlier.",
+          "Because her friend ordered the burger.",
+          "Because she saw it listed first on the menu.",
+          "Because she wanted to try the most expensive dish on the menu.",
+          "Because the steak was the only item left in the kitchen.",
+          "Because she was allergic to all other meats listed.",
+          "Because the restaurant was running a special promotion on steak that day.",
+          "Because she saw a celebrity eating the same dish on social media.",
+          "Because the waiter mentioned it was the chef's personal favorite.",
+          "Because she wanted to order something different from her friend's choice."
+        ],
+        "question": "Why did the customer in the yellow shirt specifically order the 'delicious steak'?",
+        "question_id": "Q0609",
+        "reasoning_chain": [
+          "M"
+        ],
+        "reference_answer": "",
+        "source_dataset": "EasyCom",
+        "task_type": "single_choice"
+      },
+      "review_status": {
+        "question_id": "Q0609",
+        "inherited_flag_count": 0,
+        "manual_review_signals": [],
+        "semantic_video_review_complete": false
+      },
+      "presentation_note": "Explicit HISTORY and CURRENT evidence link a recommendation to a later order."
+    },
+    {
+      "input": {
+        "category": "R",
+        "episode_id": "E0292",
+        "media_id": "video/E0292.mp4",
+        "memory_context": null,
+        "memory_dependency": null,
+        "options": [
+          "Instruct [PERSON_3] to turn around to check the wires herself.",
+          "Ignore the warning as the wires are likely not dangerous.",
+          "Maintain the current position and verbally reinforce the boundary to avoid the hazard.",
+          "Ask [PERSON_3] to move to a different room immediately.",
+          "Immediately rush forward to physically pull [PERSON_3] away from the wires.",
+          "Ask [PERSON_3] to step backward quickly to create more distance from the hazard.",
+          "Instruct [PERSON_3] to crouch down low to avoid tripping over the wires.",
+          "Request that [PERSON_3] reach behind her back to untangle the wires herself.",
+          "Order [PERSON_3] to run to the nearest exit to ensure total safety.",
+          "Ask [PERSON_3] to turn around slowly and walk directly toward the wires to inspect them."
+        ],
+        "question": "During 1.1–6.5s, the speaker warns [PERSON_3] about wires behind her. What is the most appropriate risk assessment and response for the speaker?",
+        "question_id": "Q0829",
+        "source_dataset": "EasyCom",
+        "task_type": "single_choice"
+      },
+      "reference": {
+        "answer_indices": [
+          2
+        ],
+        "answers": [
+          "Maintain the current position and verbally reinforce the boundary to avoid the hazard."
+        ],
+        "category": "R",
+        "episode_id": "E0292",
+        "evidence": [
+          {
+            "content": "Speaker 1: 'Just an FYI [PERSON_3], you can't look directly behind you just because we have like a bunch of wires.'",
+            "evidence_id": "E1",
+            "memory_evidence_role": null,
+            "subject": null,
+            "time": [
+              1.1,
+              6.5
+            ],
+            "time_offset": 0
+          }
+        ],
+        "media_id": "video/E0292.mp4",
+        "memory_context": null,
+        "memory_dependency": null,
+        "options": [
+          "Instruct [PERSON_3] to turn around to check the wires herself.",
+          "Ignore the warning as the wires are likely not dangerous.",
+          "Maintain the current position and verbally reinforce the boundary to avoid the hazard.",
+          "Ask [PERSON_3] to move to a different room immediately.",
+          "Immediately rush forward to physically pull [PERSON_3] away from the wires.",
+          "Ask [PERSON_3] to step backward quickly to create more distance from the hazard.",
+          "Instruct [PERSON_3] to crouch down low to avoid tripping over the wires.",
+          "Request that [PERSON_3] reach behind her back to untangle the wires herself.",
+          "Order [PERSON_3] to run to the nearest exit to ensure total safety.",
+          "Ask [PERSON_3] to turn around slowly and walk directly toward the wires to inspect them."
+        ],
+        "question": "During 1.1–6.5s, the speaker warns [PERSON_3] about wires behind her. What is the most appropriate risk assessment and response for the speaker?",
+        "question_id": "Q0829",
+        "reasoning_chain": [
+          "W",
+          "N",
+          "R"
+        ],
+        "reference_answer": "The safest response is to maintain the current position and reinforce the boundary, as the hazard (wires) is identified and the restriction is already in place. Moving or checking the hazard directly could cause entanglement.",
+        "source_dataset": "EasyCom",
+        "task_type": "single_choice"
+      },
+      "review_status": {
+        "question_id": "Q0829",
+        "inherited_flag_count": 0,
+        "manual_review_signals": [],
+        "semantic_video_review_complete": false
+      },
+      "presentation_note": "A quoted warning anchors a concrete physical boundary concern."
     }
   ]
 }

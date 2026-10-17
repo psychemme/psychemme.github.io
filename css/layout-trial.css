@@ -1,0 +1,31 @@
+/* Optional layout experiment: remove this stylesheet to restore the prior layout.
+   Reader copy and question rendering are independent of these rules. */
+.overview > .wrap > .section-header { display: block; max-width: 850px; margin-bottom: 34px; }
+.overview > .wrap > .section-header h2 { max-width: 850px; font-size: 37px; line-height: 1.18; text-wrap: balance; }
+.overview > .wrap > .section-header .section-intro { max-width: 780px; margin-top: 18px; font-size: 17px; line-height: 1.75; }
+.overview > .wrap > .paper-figure .figure-frame { border: 0; border-radius: 0; box-shadow: none; background: transparent; }
+.overview > .wrap > .paper-figure > figcaption { padding: 0; margin-top: 16px; border: 0; border-radius: 0; background: transparent; color: var(--muted); font-size: 13px; line-height: 1.7; }
+.overview > .wrap > .details { margin-top: 28px; }
+
+.method > .wrap > .section-header { display: block; max-width: 840px; margin-bottom: 38px; }
+.method > .wrap > .section-header h2 { font-size: 31px; line-height: 1.25; text-wrap: initial; }
+.method > .wrap > .section-header .section-intro { max-width: 770px; margin-top: 15px; font-size: 15px; line-height: 1.75; }
+.method .method-block + .method-block { margin-top: 42px; padding-top: 30px; border-top: 1px solid var(--line); }
+.method .block-copy { max-width: 860px; }
+.method .taxonomy-group { padding: 0 0 16px; border: 0; border-bottom: 1px solid var(--line); border-radius: 0; background: transparent; }
+.method .taxonomy-group:last-child { border-bottom: 0; padding-bottom: 0; }
+.method .taxonomy-group h4 { color: #3e6360; }
+.method .taxonomy-group:nth-child(2) h4 { color: var(--lavender-dark); }
+.method .equation-panel { border-radius: 8px; box-shadow: none; }
+.method .review-note { padding: 0 0 0 16px; border-left: 2px solid #b9d8cc; border-radius: 0; background: transparent; line-height: 1.75; }
+
+.case-examples .section-header { display: block; max-width: 850px; margin-bottom: 26px; }
+.case-examples .section-header .section-intro { max-width: 760px; margin-top: 14px; font-size: 15px; line-height: 1.75; }
+
+@media (max-width: 620px) {
+  .overview > .wrap > .section-header h2 { font-size: 29px; }
+  .overview > .wrap > .section-header .section-intro { font-size: 15px; margin-top: 15px; }
+  .method > .wrap > .section-header h2 { font-size: 27px; }
+  .method .method-block + .method-block { margin-top: 30px; padding-top: 26px; }
+  .case-examples .section-header .section-intro { font-size: 14px; }
+}

@@ -15,10 +15,11 @@
   <link rel="icon" href="assets/logo/favicon.png" type="image/png">
   <link rel="stylesheet" href="css/style.css?v=13">
   <link rel="stylesheet" href="css/refinements.css?v=1">
+  <link rel="stylesheet" href="css/reader.css?v=1">
   <script src="js/resources.js?v=3" defer></script>
   <script src="js/main.js?v=8" defer></script>
   <script src="js/select.js?v=1" defer></script>
-  <script src="js/onboarding.js?v=2" defer></script>
+  <script src="js/onboarding.js?v=3" defer></script>
   <title>PsycheMME: A Psychology-Informed Benchmark for Social Understanding and Interaction in Videos</title>
 </head>
 <body id="top">
@@ -36,24 +37,29 @@
   <div class="wrap">
     <h1 id="paper-title"><span class="title-line"><span class="title-project">PsycheMME:</span> A Psychology-Informed Benchmark</span><span class="title-line">for Social Understanding and Interaction in Videos</span></h1>
     <p class="anonymous-submission">Anonymous ACL submission · project page</p>
-    <p class="hero-copy">We introduce <strong>PsycheMME</strong>, a psychology-informed video benchmark for diagnosing human understanding and interaction judgments. Its <strong>1,000 questions from 630 episodes</strong> span eight capabilities, separating state and need inference from decisions about when and how to respond. Independent answering and expert review ground the questions in observed cues; <strong>Reasoning-Verified evaluation</strong> assesses the support and logical consistency of explicit rationales alongside answer credit.</p>
-    <p class="hero-finding">Timing has the lowest Verified scores across the 17 models; similar Need scores can conceal differences in answer completeness.</p>
+    <p class="hero-copy"><strong>PsycheMME</strong> evaluates how video models infer people’s states and needs, choose a response, and support that choice with evidence.</p>
+    <p class="hero-scope">The benchmark contains 1,000 questions from 630 video episodes across eight psychology-informed capabilities.</p>
     <div class="hero-actions" aria-label="Project resources"><a class="button" data-resource="code" href="https://github.com/psychemme/PsycheMME" target="_blank" rel="noopener"><img class="platform-mark" src="assets/icons/github-white.svg" alt="" width="20" height="20" aria-hidden="true"> Code</a><a class="button" data-resource="dataset" href="https://huggingface.co/datasets/psychemme/PsycheMME" target="_blank" rel="noopener"><img class="platform-mark" src="assets/icons/huggingface.svg" alt="" width="20" height="20" aria-hidden="true"> Dataset</a><a class="button" data-resource="models" href="https://huggingface.co/psychemme" target="_blank" rel="noopener"><img class="platform-mark" src="assets/icons/huggingface.svg" alt="" width="20" height="20" aria-hidden="true"> Models</a><a class="button" data-resource="logs" href="https://huggingface.co/datasets/psychemme/PsycheMME/tree/main/results" target="_blank" rel="noopener"><img class="platform-mark" src="assets/icons/huggingface.svg" alt="" width="20" height="20" aria-hidden="true"> Evaluation Logs</a></div>
 
+    <figure class="task-map" aria-label="PsycheMME tasks span social cues, states and needs, and response decisions. Reasoning-Verified evaluation checks the explanation against evidence and logic.">
+      <div class="task-map-flow">
+        <div class="task-map-cues"><svg viewBox="0 0 64 42" aria-hidden="true"><rect x="1" y="1" width="62" height="40" rx="5"/><path d="m27 11 15 10-15 10z"/><path d="M7 35h9m3 0h5"/></svg><div><strong>Social cues</strong><p>Speech, gestures, expressions</p></div></div>
+        <span class="task-map-arrow" aria-hidden="true">→</span>
+        <div><strong>States &amp; needs</strong><p>What is the person experiencing?</p></div>
+        <span class="task-map-arrow" aria-hidden="true">→</span>
+        <div><strong>Response decisions</strong><p>When and how should it respond?</p></div>
+      </div>
+      <figcaption><span>Reasoning-Verified</span><p>Does the explanation fit the evidence and follow logically?</p></figcaption>
+    </figure>
   </div>
 </section>
 <section class="section overview" id="overview" aria-labelledby="overview-title">
   <div class="wrap">
     <div class="section-header">
-      <div><p class="section-label">01 / Overview</p><h2 id="overview-title">Diagnosing human understanding and interaction</h2></div>
-      <p class="section-intro">Social Information Processing and the Perception-Action Cycle guide a shared taxonomy: infer states and needs from observable cues, then judge an appropriate response. Relevant history and social boundaries can change that judgment.</p>
+      <div><p class="section-label">01 / Overview</p><h2 id="overview-title">Reading a situation, deciding how to respond</h2></div>
+      <p class="section-intro">Recognizing a gesture, inferring a need and choosing a response are different judgments. PsycheMME evaluates them separately, with relevant history and social boundaries included where they matter.</p>
     </div>
     <figure class="paper-figure "><a class="figure-frame" href="assets/figures/overview.webp" data-lightbox data-title="Figure 1. Overview of PsycheMME" data-vector="assets/figures/overview.pdf" aria-label="Enlarge Figure 1. Overview of PsycheMME"><img src="assets/figures/overview.webp" alt="Figure 1. Overview of PsycheMME" width="3000" height="1431" loading="lazy" decoding="async"><span class="zoom-hint"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 2H2v4m8-4h4v4M2 10v4h4m8-4v4h-4"/></svg> Enlarge</span></a><figcaption><strong>Figure 1.</strong> Diverse human-centric social situations; eight capabilities from social cues to interaction; and overall results for 17 models. <a class="vector-link" href="assets/figures/overview.pdf" target="_blank" rel="noopener">Vector PDF ↗</a></figcaption></figure>
-    <div class="questions-grid">
-      <article class="question-item"><h3>Human understanding</h3><p>Associate social cues with the right person, interpret their psychological state, and identify the support they need and are willing to receive.</p></article>
-      <article class="question-item"><h3>Interaction decisions</h3><p>Judge whether and when to respond, what to say, and which physical or nonverbal action fits the situation.</p></article>
-      <article class="question-item"><h3>Rationale verification</h3><p>Assess the support and consistency of explicit rationales, alongside answer correctness, relevant history, and social boundaries.</p></article>
-    </div>
     <details class="details"><summary><span>A closer look at the benchmark <small>Composition &amp; statistics</small></span></summary>
       <p class="composition-note">630 episodes across eight source groups support 890 choice questions and 110 open questions. The overview illustrates 16 scene categories. Uneven capability counts motivate macro averaging across the eight capabilities.</p>
       <figure class="paper-figure "><a class="figure-frame" href="assets/figures/statistics.webp" data-lightbox data-title="Figure 4. Benchmark statistics" data-vector="assets/figures/statistics.pdf" aria-label="Enlarge Figure 4. Benchmark statistics"><img src="assets/figures/statistics.webp" alt="Figure 4. Benchmark statistics" width="3000" height="1333" loading="lazy" decoding="async"><span class="zoom-hint"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 2H2v4m8-4h4v4M2 10v4h4m8-4v4h-4"/></svg> Enlarge</span></a><figcaption><strong>Figure 4.</strong> Capability taxonomy, dataset composition, video duration, question length, and frequent keywords. <a class="vector-link" href="assets/figures/statistics.pdf" target="_blank" rel="noopener">Vector PDF ↗</a></figcaption></figure>
@@ -151,12 +157,12 @@
 <section class="section method" id="method" aria-labelledby="method-title">
   <div class="wrap">
     <div class="section-header">
-      <div><p class="section-label">03 / Methodology</p><h2 id="method-title">How PsycheMME is built and evaluated</h2></div>
-      <p class="section-intro">Social Information Processing and the Perception-Action Cycle motivate a shared taxonomy. Independent answering and expert review ground the questions; a fixed rubric evaluates answers and explicit rationales.</p>
+      <div><p class="section-label">03 / Methodology</p><h2 id="method-title">From video selection to verified scores</h2></div>
+      <p class="section-intro">Questions are generated, answered independently and reviewed by experts before the benchmark is frozen. Evaluation then scores the answer and the evidence given for it.</p>
     </div>
     <div class="method-block">
       <div class="block-heading"><span class="block-index">A /</span><h3>Capability taxonomy</h3></div>
-      <p class="block-copy">The taxonomy distinguishes observable cues, interpretations of states and needs, and response selection. Relevant history and social constraints can shape each judgment.</p>
+      <p class="block-copy">Social Information Processing and the Perception-Action Cycle guide the eight capabilities: what can be observed, what is inferred about a person, and how to respond.</p>
       <div class="capability-layout"><figure class="paper-figure method-scenario"><a class="figure-frame" href="assets/figures/capabilities.webp" data-lightbox data-title="Figure 2. Illustrative scenarios and capabilities" data-vector="assets/figures/capabilities.pdf" aria-label="Enlarge Figure 2. Illustrative scenarios and capabilities"><img src="assets/figures/capabilities.webp" alt="Figure 2. Illustrative scenarios and capabilities" width="3000" height="1613" loading="lazy" decoding="async"><span class="zoom-hint"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 2H2v4m8-4h4v4M2 10v4h4m8-4v4h-4"/></svg> Enlarge</span></a><figcaption><strong>Figure 2.</strong> Human understanding, interaction decisions, memory, and social constraints in an illustrative egocentric scenario adapted from CASTLE. <a class="vector-link" href="assets/figures/capabilities.pdf" target="_blank" rel="noopener">Vector PDF ↗</a></figcaption></figure><div class="capability-sidebar"><div class="taxonomy">
         <div class="taxonomy-group"><h4>Human understanding</h4><div class="capability"><b>G</b>Grounding <small>186 questions</small></div><div class="capability"><b>W</b>Psychological Understanding <small>320</small></div><div class="capability"><b>N</b>Need <small>97</small></div></div>
         <div class="taxonomy-group"><h4>Interaction decision</h4><div class="capability"><b>T</b>Timing <small>72 questions</small></div><div class="capability"><b>S</b>Verbal Response <small>97</small></div><div class="capability"><b>A</b>Action <small>94</small></div></div>
@@ -208,8 +214,8 @@
     </div>
 <div class="case-examples" id="examples" aria-labelledby="examples-title">
   <div class="case-examples-inner">
-    <div class="section-header"><div><p class="section-label">Released task examples</p><h3 id="examples-title">Browse the released questions</h3></div><p class="section-intro">These text examples illustrate the eight capabilities. References are shown separately from model inputs; evaluation also requires the original video and ASR.</p></div>
-    <div class="sample-toolbar"><label for="sample-capability">Choose a capability</label><select id="sample-capability"><option value="G">G · Grounding</option><option value="W">W · Psychological Understanding</option><option value="N" selected>N · Need</option><option value="T">T · Timing</option><option value="S">S · Verbal Response</option><option value="A">A · Action</option><option value="M">M · Memory</option><option value="R">R · Risk</option></select><span id="sample-meta"></span></div>
+    <div class="section-header"><div><p class="section-label">Released questions</p><h3 id="examples-title">A closer look at a question</h3></div><p class="section-intro">Choose a capability, read a question, then open the reference to see the answer and its supporting cues. These are text previews; the original video and transcript are needed for evaluation.</p></div>
+    <div class="sample-toolbar"><label for="sample-capability">Capability</label><select id="sample-capability"><option value="G">G · Grounding</option><option value="W">W · Psychological Understanding</option><option value="N" selected>N · Need</option><option value="T">T · Timing</option><option value="S">S · Verbal Response</option><option value="A">A · Action</option><option value="M">M · Memory</option><option value="R">R · Risk</option></select><span id="sample-meta"></span></div>
     <div id="sample-content" aria-live="polite"><p class="sample-loading">Loading public text examples… <a href="https://huggingface.co/datasets/psychemme/PsycheMME/tree/main/dataset/text_subset" target="_blank" rel="noopener">Read the source files ↗</a></p></div>
     <p class="sample-license">EasyCom-derived text · CC BY-NC 4.0 · <a href="assets/EXAMPLE_NOTICES.md" target="_blank" rel="noopener">Attribution and selection notes</a> · <a href="assets/EasyCom_CC_BY_NC_4.0.txt" target="_blank" rel="noopener">License</a>. Curated for clear cue and context links; original records and review metadata are preserved. Text inspection does not certify video-level correctness.</p>
 

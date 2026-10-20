@@ -1,0 +1,673 @@
+{
+  "data_revision": "b09064ae9375f219ae03e4fa2ae31ee32f72bdb1",
+  "selection": "Task-format illustrations selected for observable cues, explicit temporal/history links and alignment with capability definitions. No model performance was used. These text checks do not certify video-level correctness. Original records and review metadata are preserved.",
+  "selection_revision": "website-20261019",
+  "license": "Source-specific: CC BY-NC 4.0 (EasyCom-derived text); CC BY 4.0 (IndEgo-derived text)",
+  "examples": [
+    {
+      "input": {
+        "category": "G",
+        "episode_id": "E0300",
+        "media_id": "video/E0300.mp4",
+        "memory_context": null,
+        "memory_dependency": null,
+        "options": [
+          "They are both sleeping at the table.",
+          "Both individuals are typing on separate laptops.",
+          "They are engaged in a physical exercise routine.",
+          "The person on the left is reading a book while the person on the right writes notes.",
+          "The person on the left is using a laptop while the person on the right observes.",
+          "The person on the right is cooking while the person on the left eats.",
+          "The person on the right is presenting information on a large screen.",
+          "They are playing a board game on the table."
+        ],
+        "question": "What is the primary shared activity involving the person on the left and the person on the right at the beginning of the video?",
+        "question_id": "Q0348",
+        "source_dataset": "EasyCom",
+        "task_type": "single_choice"
+      },
+      "reference": {
+        "answer_indices": [
+          4
+        ],
+        "answers": [
+          "The person on the left is using a laptop while the person on the right observes."
+        ],
+        "category": "G",
+        "episode_id": "E0300",
+        "evidence": [
+          {
+            "content": "P1 is seated at a table, looking at and interacting with a black laptop with a green logo.",
+            "evidence_id": null,
+            "memory_evidence_role": null,
+            "subject": "P1",
+            "time": [
+              0.0,
+              47.0
+            ]
+          },
+          {
+            "content": "P2 sits with hands clasped on the table, observing P1 and the laptop.",
+            "evidence_id": null,
+            "memory_evidence_role": null,
+            "subject": "P2",
+            "time": [
+              0.0,
+              47.0
+            ]
+          }
+        ],
+        "media_id": "video/E0300.mp4",
+        "memory_context": null,
+        "memory_dependency": null,
+        "options": [
+          "They are both sleeping at the table.",
+          "Both individuals are typing on separate laptops.",
+          "They are engaged in a physical exercise routine.",
+          "The person on the left is reading a book while the person on the right writes notes.",
+          "The person on the left is using a laptop while the person on the right observes.",
+          "The person on the right is cooking while the person on the left eats.",
+          "The person on the right is presenting information on a large screen.",
+          "They are playing a board game on the table."
+        ],
+        "question": "What is the primary shared activity involving the person on the left and the person on the right at the beginning of the video?",
+        "question_id": "Q0348",
+        "reasoning_chain": [
+          "G"
+        ],
+        "reference_answer": null,
+        "source_dataset": "EasyCom",
+        "task_type": "single_choice"
+      },
+      "review_status": {
+        "question_id": "Q0348",
+        "inherited_flag_count": 0,
+        "manual_review_signals": [],
+        "semantic_video_review_complete": false
+      },
+      "presentation_note": "Observable shared activity, with distinct activity alternatives."
+    },
+    {
+      "input": {
+        "category": "W",
+        "episode_id": "E0284",
+        "media_id": "video/E0284.mp4",
+        "memory_context": null,
+        "memory_dependency": null,
+        "options": [
+          "They appear frustrated and cross their arms tightly.",
+          "They shift from passive waiting to smiling and looking engaged.",
+          "They look bored and start checking their phones.",
+          "They stand up and move away from the table.",
+          "They become visibly confused and look away from the card.",
+          "They remain completely neutral and do not change their posture.",
+          "They start laughing loudly and leaning back in their chairs.",
+          "They look at each other and whisper without smiling."
+        ],
+        "question": "How do the participants' emotional states change after the card is presented?",
+        "question_id": "Q0351",
+        "source_dataset": "EasyCom",
+        "task_type": "single_choice"
+      },
+      "reference": {
+        "answer_indices": [
+          1
+        ],
+        "answers": [
+          "They shift from passive waiting to smiling and looking engaged."
+        ],
+        "category": "W",
+        "episode_id": "E0284",
+        "evidence": [
+          {
+            "content": "P1 shifts from resting his head to leaning back, smiling, and looking engaged.",
+            "evidence_id": null,
+            "memory_evidence_role": null,
+            "subject": "P1",
+            "time": [
+              21,
+              60
+            ]
+          },
+          {
+            "content": "P2 shifts from a neutral posture to resting their chin on their hand and smiling.",
+            "evidence_id": null,
+            "memory_evidence_role": null,
+            "subject": "P2",
+            "time": [
+              23,
+              60
+            ]
+          }
+        ],
+        "media_id": "video/E0284.mp4",
+        "memory_context": null,
+        "memory_dependency": null,
+        "options": [
+          "They appear frustrated and cross their arms tightly.",
+          "They shift from passive waiting to smiling and looking engaged.",
+          "They look bored and start checking their phones.",
+          "They stand up and move away from the table.",
+          "They become visibly confused and look away from the card.",
+          "They remain completely neutral and do not change their posture.",
+          "They start laughing loudly and leaning back in their chairs.",
+          "They look at each other and whisper without smiling."
+        ],
+        "question": "How do the participants' emotional states change after the card is presented?",
+        "question_id": "Q0351",
+        "reasoning_chain": [
+          "W"
+        ],
+        "reference_answer": null,
+        "source_dataset": "EasyCom",
+        "task_type": "single_choice"
+      },
+      "review_status": {
+        "question_id": "Q0351",
+        "inherited_flag_count": 0,
+        "manual_review_signals": [],
+        "semantic_video_review_complete": false
+      },
+      "presentation_note": "Change in engagement linked to posture and expression cues."
+    },
+    {
+      "input": {
+        "category": "N",
+        "episode_id": "E0284",
+        "media_id": "video/E0284.mp4",
+        "memory_context": null,
+        "memory_dependency": null,
+        "options": [
+          "PREVENTIVE_INTERVENTION",
+          "INTERVENE_NOW",
+          "OFFER_DIRECTLY",
+          "DEESCALATE",
+          "REFER_TO_OTHER",
+          "WAIT_AND_OBSERVE",
+          "NO_INTERVENTION",
+          "ASK_FIRST",
+          "CORRECTIVE_INTERVENTION",
+          "IGNORE_HESITATION"
+        ],
+        "question": "Given the person's uncertainty regarding the puzzle rules, what intervention is appropriate?",
+        "question_id": "Q0876",
+        "source_dataset": "EasyCom",
+        "task_type": "single_choice"
+      },
+      "reference": {
+        "answer_indices": [
+          7
+        ],
+        "answers": [
+          "ASK_FIRST"
+        ],
+        "category": "N",
+        "episode_id": "E0284",
+        "evidence": [
+          {
+            "content": "P2 hesitates and seeks clarification about the rules of the puzzle.",
+            "subject": "P2",
+            "time": [
+              19.75,
+              24.2
+            ],
+            "time_in_video": true,
+            "time_offset": 0.0
+          }
+        ],
+        "media_id": "video/E0284.mp4",
+        "memory_context": null,
+        "memory_dependency": null,
+        "options": [
+          "PREVENTIVE_INTERVENTION",
+          "INTERVENE_NOW",
+          "OFFER_DIRECTLY",
+          "DEESCALATE",
+          "REFER_TO_OTHER",
+          "WAIT_AND_OBSERVE",
+          "NO_INTERVENTION",
+          "ASK_FIRST",
+          "CORRECTIVE_INTERVENTION",
+          "IGNORE_HESITATION"
+        ],
+        "question": "Given the person's uncertainty regarding the puzzle rules, what intervention is appropriate?",
+        "question_id": "Q0876",
+        "reasoning_chain": null,
+        "reference_answer": "",
+        "source_dataset": "EasyCom",
+        "task_type": "single_choice"
+      },
+      "review_status": {
+        "question_id": "Q0876",
+        "inherited_flag_count": 0,
+        "manual_review_signals": [],
+        "semantic_video_review_complete": false
+      },
+      "presentation_note": "A clarification cue motivates the ASK_FIRST reference."
+    },
+    {
+      "input": {
+        "category": "T",
+        "episode_id": "E0284",
+        "media_id": "video/E0284.mp4",
+        "memory_context": null,
+        "memory_dependency": null,
+        "options": [
+          "0.0s-10.0s",
+          "10.0s-23.0s",
+          "23.0s-27.0s",
+          "27.0s-60.0s"
+        ],
+        "question": "When is the appropriate time for the EGO_AGENT to transition from waiting to initiating the task?",
+        "question_id": "Q0368",
+        "source_dataset": "EasyCom",
+        "task_type": "single_choice"
+      },
+      "reference": {
+        "answer_indices": [
+          2
+        ],
+        "answers": [
+          "23.0s-27.0s"
+        ],
+        "category": "T",
+        "episode_id": "E0284",
+        "evidence": [
+          {
+            "content": "The ego-agent presents the card, marking the transition from waiting to task initiation.",
+            "evidence_id": null,
+            "memory_evidence_role": null,
+            "subject": "EGO_AGENT",
+            "time": [
+              23,
+              27
+            ]
+          }
+        ],
+        "media_id": "video/E0284.mp4",
+        "memory_context": null,
+        "memory_dependency": null,
+        "options": [
+          "0.0s-10.0s",
+          "10.0s-23.0s",
+          "23.0s-27.0s",
+          "27.0s-60.0s"
+        ],
+        "question": "When is the appropriate time for the EGO_AGENT to transition from waiting to initiating the task?",
+        "question_id": "Q0368",
+        "reasoning_chain": [
+          "T"
+        ],
+        "reference_answer": null,
+        "source_dataset": "EasyCom",
+        "task_type": "single_choice",
+        "timing_numeric_only_audit": {
+          "gold_rationale_zh": "冻结证据显示EGO_AGENT在23至27秒呈现卡片，标志着从等待转入任务启动。",
+          "protocol": "timing-four-numeric-disjoint-v2"
+        }
+      },
+      "review_status": {
+        "question_id": "Q0368",
+        "inherited_flag_count": 0,
+        "manual_review_signals": [],
+        "semantic_video_review_complete": false
+      },
+      "presentation_note": "A transition is anchored to an explicit task event and interval."
+    },
+    {
+      "input": {
+        "category": "S",
+        "episode_id": "E0304",
+        "media_id": "video/E0304.mp4",
+        "memory_context": null,
+        "memory_dependency": null,
+        "options": [
+          "VALIDATE",
+          "APOLOGIZE",
+          "DECLINE",
+          "REDIRECT",
+          "ENCOURAGE",
+          "OFFER_HELP",
+          "SET_BOUNDARY",
+          "ASK_CLARIFICATION",
+          "ACKNOWLEDGE",
+          "COMFORT",
+          "IGNORE"
+        ],
+        "question": "During 14.1-18.65s, what response strategy does the EGO_AGENT employ?",
+        "question_id": "Q0453",
+        "source_dataset": "EasyCom",
+        "task_type": "single_choice"
+      },
+      "reference": {
+        "answer_indices": [
+          7
+        ],
+        "answers": [
+          "ASK_CLARIFICATION"
+        ],
+        "category": "S",
+        "episode_id": "E0304",
+        "evidence": [
+          {
+            "content": "EGO_AGENT asks, 'Can he go? Can he be on a mountain and-'",
+            "subject": "EGO_AGENT",
+            "time": [
+              14.1,
+              18.65
+            ],
+            "time_in_video": true,
+            "time_offset": 0.0
+          }
+        ],
+        "media_id": "video/E0304.mp4",
+        "memory_context": null,
+        "memory_dependency": null,
+        "options": [
+          "VALIDATE",
+          "APOLOGIZE",
+          "DECLINE",
+          "REDIRECT",
+          "ENCOURAGE",
+          "OFFER_HELP",
+          "SET_BOUNDARY",
+          "ASK_CLARIFICATION",
+          "ACKNOWLEDGE",
+          "COMFORT",
+          "IGNORE"
+        ],
+        "question": "During 14.1-18.65s, what response strategy does the EGO_AGENT employ?",
+        "question_id": "Q0453",
+        "reasoning_chain": null,
+        "reference_answer": "",
+        "source_dataset": "EasyCom",
+        "task_type": "single_choice"
+      },
+      "review_status": {
+        "question_id": "Q0453",
+        "inherited_flag_count": 0,
+        "manual_review_signals": [],
+        "semantic_video_review_complete": false
+      },
+      "presentation_note": "A clarification question has a specific quoted utterance and time window."
+    },
+    {
+      "input": {
+        "category": "A",
+        "episode_id": "E0322",
+        "media_id": "video/E0322.mp4",
+        "memory_context": null,
+        "memory_dependency": null,
+        "options": [
+          "Turn away from the waiter to continue looking at the other diners.",
+          "Orient towards the waiter and make space on the table for the menu.",
+          "Reach out to grab the menu before the waiter places it.",
+          "Stand up to shake the waiter's hand.",
+          "Stand up abruptly to block the waiter's path while shouting for attention.",
+          "Ignore the waiter completely and continue staring at the floor.",
+          "Throw your napkin onto the table to signal that you are ready to order immediately.",
+          "Turn your back to the waiter and loudly discuss the menu with the person across from you.",
+          "Wave your hands frantically in the air to indicate you do not want a menu.",
+          "Lean forward aggressively to inspect the waiter's uniform before they speak."
+        ],
+        "question": "During 25–28s, which option best describes the appropriate embodied action or policy?",
+        "question_id": "Q0749",
+        "source_dataset": "EasyCom",
+        "task_type": "single_choice"
+      },
+      "reference": {
+        "answer_indices": [
+          1
+        ],
+        "answers": [
+          "Orient towards the waiter and make space on the table for the menu."
+        ],
+        "category": "A",
+        "episode_id": "E0322",
+        "evidence": [
+          {
+            "content": "Visual: Waiter walks to the table and places menus in front of the diners. The diners look at the waiter and the menus.",
+            "evidence_id": "E2",
+            "memory_evidence_role": null,
+            "subject": null,
+            "time": [
+              25,
+              28
+            ],
+            "time_offset": 0
+          }
+        ],
+        "media_id": "video/E0322.mp4",
+        "memory_context": null,
+        "memory_dependency": null,
+        "options": [
+          "Turn away from the waiter to continue looking at the other diners.",
+          "Orient towards the waiter and make space on the table for the menu.",
+          "Reach out to grab the menu before the waiter places it.",
+          "Stand up to shake the waiter's hand.",
+          "Stand up abruptly to block the waiter's path while shouting for attention.",
+          "Ignore the waiter completely and continue staring at the floor.",
+          "Throw your napkin onto the table to signal that you are ready to order immediately.",
+          "Turn your back to the waiter and loudly discuss the menu with the person across from you.",
+          "Wave your hands frantically in the air to indicate you do not want a menu.",
+          "Lean forward aggressively to inspect the waiter's uniform before they speak."
+        ],
+        "question": "During 25–28s, which option best describes the appropriate embodied action or policy?",
+        "question_id": "Q0749",
+        "reasoning_chain": [
+          "W",
+          "N",
+          "A"
+        ],
+        "reference_answer": "The EGO_AGENT should orient towards the waiter to acknowledge their presence and ensure the table space is clear for the menu placement, facilitating a smooth service interaction.",
+        "source_dataset": "EasyCom",
+        "task_type": "single_choice"
+      },
+      "review_status": {
+        "question_id": "Q0749",
+        "inherited_flag_count": 0,
+        "manual_review_signals": [],
+        "semantic_video_review_complete": false
+      },
+      "presentation_note": "Physical orientation and space-making illustrate embodied action."
+    },
+    {
+      "input": {
+        "category": "M",
+        "episode_id": "E0295",
+        "media_id": "video/E0295.mp4",
+        "memory_context": null,
+        "memory_dependency": "The customer explicitly states 'I'll take what you recommended', linking the current order to the waiter's past utterance. The current window alone does not contain the recommendation.",
+        "options": [
+          "Because it was the cheapest item on the menu.",
+          "Because the waiter had personally recommended it earlier.",
+          "Because her friend ordered the burger.",
+          "Because she saw it listed first on the menu.",
+          "Because she wanted to try the most expensive dish on the menu.",
+          "Because the steak was the only item left in the kitchen.",
+          "Because she was allergic to all other meats listed.",
+          "Because the restaurant was running a special promotion on steak that day.",
+          "Because she saw a celebrity eating the same dish on social media.",
+          "Because the waiter mentioned it was the chef's personal favorite.",
+          "Because she wanted to order something different from her friend's choice."
+        ],
+        "question": "Why did the customer in the yellow shirt specifically order the 'delicious steak'?",
+        "question_id": "Q0609",
+        "source_dataset": "EasyCom",
+        "task_type": "single_choice"
+      },
+      "reference": {
+        "answer_indices": [
+          1
+        ],
+        "answers": [
+          "Because the waiter had personally recommended it earlier."
+        ],
+        "category": "M",
+        "episode_id": "E0295",
+        "evidence": [
+          {
+            "content": "Waiter (P1) says: 'I, personally, am a huge fan of the delicious steak. I find it rather delicious.'",
+            "evidence_id": "H1",
+            "memory_evidence_role": "HISTORY",
+            "subject": null,
+            "time": [
+              13.2,
+              17.0
+            ],
+            "time_offset": 0
+          },
+          {
+            "content": "Customer (P3) says: 'Oh gosh, yeah! I- I'll take what you recommended, that delicious steak!'",
+            "evidence_id": "C1",
+            "memory_evidence_role": "CURRENT",
+            "subject": null,
+            "time": [
+              43.0,
+              54.1
+            ],
+            "time_offset": 0
+          }
+        ],
+        "media_id": "video/E0295.mp4",
+        "memory_context": null,
+        "memory_dependency": "The customer explicitly states 'I'll take what you recommended', linking the current order to the waiter's past utterance. The current window alone does not contain the recommendation.",
+        "options": [
+          "Because it was the cheapest item on the menu.",
+          "Because the waiter had personally recommended it earlier.",
+          "Because her friend ordered the burger.",
+          "Because she saw it listed first on the menu.",
+          "Because she wanted to try the most expensive dish on the menu.",
+          "Because the steak was the only item left in the kitchen.",
+          "Because she was allergic to all other meats listed.",
+          "Because the restaurant was running a special promotion on steak that day.",
+          "Because she saw a celebrity eating the same dish on social media.",
+          "Because the waiter mentioned it was the chef's personal favorite.",
+          "Because she wanted to order something different from her friend's choice."
+        ],
+        "question": "Why did the customer in the yellow shirt specifically order the 'delicious steak'?",
+        "question_id": "Q0609",
+        "reasoning_chain": [
+          "M"
+        ],
+        "reference_answer": "",
+        "source_dataset": "EasyCom",
+        "task_type": "single_choice"
+      },
+      "review_status": {
+        "question_id": "Q0609",
+        "inherited_flag_count": 0,
+        "manual_review_signals": [],
+        "semantic_video_review_complete": false
+      },
+      "presentation_note": "Explicit HISTORY and CURRENT evidence link a recommendation to a later order."
+    },
+    {
+      "input": {
+        "category": "R",
+        "episode_id": "E0077",
+        "media_id": "video/E0077.mp4",
+        "memory_context": null,
+        "memory_dependency": null,
+        "options": [
+          "Moderate risk: The object is heavy and awkward, requiring coordinated lifting and caution to prevent musculoskeletal injury or dropping the load.",
+          "High risk: The object is unstable and likely to fall, requiring immediate evacuation of the area.",
+          "No risk: The task is routine and poses no threat to safety.",
+          "Critical risk: The freight elevator is structurally compromised and will collapse under the weight of the pallet.",
+          "Negligible risk: The plastic wrapping provides sufficient cushioning to allow for rapid, uncoordinated tossing of the object.",
+          "Extreme risk: The metal frames are radioactive and require immediate containment protocols and full hazmat suits.",
+          "Low risk: The object is light enough for a single person to lift without bending their knees or using their legs.",
+          "Moderate risk: The primary danger is the object emitting a loud noise that will cause hearing damage to nearby workers.",
+          "No risk: The task is purely administrative and involves no physical exertion or potential for injury."
+        ],
+        "question": "During the lifting and wrapping sequence, what is the most appropriate safety policy or boundary assessment for the workers?",
+        "question_id": "Q0600",
+        "source_dataset": "IndEgo",
+        "task_type": "single_choice"
+      },
+      "reference": {
+        "answer_indices": [
+          0
+        ],
+        "answers": [
+          "Moderate risk: The object is heavy and awkward, requiring coordinated lifting and caution to prevent musculoskeletal injury or dropping the load."
+        ],
+        "category": "R",
+        "episode_id": "E0077",
+        "evidence": [
+          {
+            "content": "the speaker kneels on the floor and assists EGO_AGENT in wrapping a large white cylindrical object and metal frames with plastic stretch film.",
+            "display_time": [
+              0.0,
+              20.0
+            ],
+            "evidence_id": "E1",
+            "memory_evidence_role": null,
+            "source_time": [
+              468,
+              557
+            ],
+            "subject": null,
+            "time": [
+              0,
+              20.0
+            ],
+            "time_in_video": true,
+            "time_offset": 0
+          },
+          {
+            "content": "EGO_AGENT and the speaker lift and place the wrapped object onto a wooden pallet inside a freight elevator.",
+            "display_time": [
+              20.0,
+              40.0
+            ],
+            "evidence_id": "E2",
+            "memory_evidence_role": null,
+            "source_time": [
+              736,
+              825
+            ],
+            "subject": null,
+            "time": [
+              20.0,
+              40.0
+            ],
+            "time_in_video": true,
+            "time_offset": 0
+          }
+        ],
+        "media_id": "video/E0077.mp4",
+        "memory_context": null,
+        "memory_dependency": null,
+        "options": [
+          "Moderate risk: The object is heavy and awkward, requiring coordinated lifting and caution to prevent musculoskeletal injury or dropping the load.",
+          "High risk: The object is unstable and likely to fall, requiring immediate evacuation of the area.",
+          "No risk: The task is routine and poses no threat to safety.",
+          "Critical risk: The freight elevator is structurally compromised and will collapse under the weight of the pallet.",
+          "Negligible risk: The plastic wrapping provides sufficient cushioning to allow for rapid, uncoordinated tossing of the object.",
+          "Extreme risk: The metal frames are radioactive and require immediate containment protocols and full hazmat suits.",
+          "Low risk: The object is light enough for a single person to lift without bending their knees or using their legs.",
+          "Moderate risk: The primary danger is the object emitting a loud noise that will cause hearing damage to nearby workers.",
+          "No risk: The task is purely administrative and involves no physical exertion or potential for injury."
+        ],
+        "question": "During the lifting and wrapping sequence, what is the most appropriate safety policy or boundary assessment for the workers?",
+        "question_id": "Q0600",
+        "reasoning_chain": [
+          "W",
+          "N",
+          "R"
+        ],
+        "reference_answer": "The action involves lifting a large, heavy object (cylindrical object and metal frames) which presents a moderate risk of physical injury. The risk is observable due to the nature of the object and the lifting action. The safest response involves coordinated effort and caution.",
+        "source_dataset": "IndEgo",
+        "task_type": "single_choice"
+      },
+      "review_status": {
+        "question_id": "Q0600",
+        "inherited_flag_count": 0,
+        "manual_review_signals": [],
+        "semantic_video_review_complete": false
+      },
+      "presentation_note": "Coordinated lifting of a heavy object illustrates a concrete safety assessment without personal-name placeholders."
+    }
+  ]
+}

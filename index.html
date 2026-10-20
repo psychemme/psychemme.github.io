@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="PsycheMME: a psychology-informed video benchmark with 1,000 questions, eight diagnostic capabilities, and Reasoning-Verified evaluation of social understanding and interaction.">
+  <meta name="theme-color" content="#207479">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="PsycheMME | Understanding People, Informing Interaction">
+  <meta property="og:description" content="A Psychology-Informed Benchmark for Social Understanding and Interaction in Videos. Anonymous academic project page.">
+  <meta property="og:url" content="https://psychemme.github.io/">
+  <meta property="og:image" content="https://psychemme.github.io/assets/logo/wordmark.webp">
+  <meta name="twitter:card" content="summary">
+  <link rel="canonical" href="https://psychemme.github.io/">
+  <link rel="icon" href="assets/logo/favicon.png" type="image/png">
+  <link rel="stylesheet" href="css/style.css?v=13">
+  <link rel="stylesheet" href="css/refinements.css?v=1">
+  <link rel="stylesheet" href="css/reader.css?v=1">
+  <link rel="stylesheet" href="css/layout-trial.css?v=1">
+  <script src="js/resources.js?v=4" defer></script>
+  <script src="js/main.js?v=10" defer></script>
+  <script src="js/select.js?v=1" defer></script>
+  <script src="js/onboarding.js?v=4" defer></script>
+  <title>PsycheMME: A Psychology-Informed Benchmark for Social Understanding and Interaction in Videos</title>
+</head>
+<body id="top">
+<a href="#overview" class="skip-link">Skip to content</a>
+<header class="site-header">
+  <nav class="nav-inner wrap" aria-label="Main navigation">
+    <a class="brand" href="#top" aria-label="PsycheMME home"><img src="assets/logo/mark.webp" alt="" width="46" height="32"><span>Psyche<span>MME</span></span></a>
+    <div class="nav-links" id="nav-links">
+      <a href="#overview">Overview</a><a href="#results">Results</a><a href="#method">Method</a><a href="#cases">Case study</a><a href="#examples">Examples</a><a href="#resources">Release</a>
+    </div>
+  </nav>
+</header>
+<main>
+<section class="hero" aria-labelledby="paper-title">
+  <div class="wrap">
+    <h1 id="paper-title"><span class="title-line"><span class="title-project">PsycheMME:</span> A Psychology-Informed Benchmark</span><span class="title-line">for Social Understanding and Interaction in Videos</span></h1>
+    <p class="anonymous-submission">Anonymous ACL submission · project page</p>
+    <p class="hero-copy"><strong>PsycheMME</strong> evaluates how video models infer people’s states and needs, choose a response, and support that choice with evidence.</p>
+    <p class="hero-scope">The benchmark contains 1,000 questions from 630 video episodes across eight psychology-informed capabilities.</p>
+    <div class="hero-actions" aria-label="Project resources"><a class="button" data-resource="code" href="https://github.com/psychemme/PsycheMME" target="_blank" rel="noopener"><img class="platform-mark" src="assets/icons/github-white.svg" alt="" width="20" height="20" aria-hidden="true"> Code</a><a class="button" data-resource="dataset" href="https://huggingface.co/datasets/psychemme/PsycheMME" target="_blank" rel="noopener"><img class="platform-mark" src="assets/icons/huggingface.svg" alt="" width="20" height="20" aria-hidden="true"> Dataset</a><a class="button" data-resource="models" href="https://huggingface.co/psychemme" target="_blank" rel="noopener"><img class="platform-mark" src="assets/icons/huggingface.svg" alt="" width="20" height="20" aria-hidden="true"> Models</a><a class="button" data-resource="logs" href="https://huggingface.co/datasets/psychemme/PsycheMME#coming-soon" target="_blank" rel="noopener"><img class="platform-mark" src="assets/icons/huggingface.svg" alt="" width="20" height="20" aria-hidden="true"> Evaluation Logs</a></div>
+
+    <figure class="task-map" aria-label="PsycheMME tasks span social cues, states and needs, and response decisions. Reasoning-Verified evaluation checks the explanation against evidence and logic.">
+      <div class="task-map-flow">
+        <div class="task-map-cues"><svg viewBox="0 0 64 42" aria-hidden="true"><rect x="1" y="1" width="62" height="40" rx="5"/><path d="m27 11 15 10-15 10z"/><path d="M7 35h9m3 0h5"/></svg><div><strong>Social cues</strong><p>Speech, gestures, expressions</p></div></div>
+        <span class="task-map-arrow" aria-hidden="true">→</span>
+        <div><strong>States &amp; needs</strong><p>What is the person experiencing?</p></div>
+        <span class="task-map-arrow" aria-hidden="true">→</span>
+        <div><strong>Response decisions</strong><p>When and how should it respond?</p></div>
+      </div>
+      <figcaption><span>Reasoning-Verified</span><p>Does the explanation fit the evidence and follow logically?</p></figcaption>
+    </figure>
+  </div>
+</section>
+<section class="section overview" id="overview" aria-labelledby="overview-title">
+  <div class="wrap">
+    <div class="section-header">
+      <div><p class="section-label">01 / Overview</p><h2 id="overview-title">Reading a situation, deciding how to respond</h2></div>
+      <p class="section-intro">Recognizing a gesture, inferring a need and choosing a response are different judgments. PsycheMME evaluates them separately, with relevant history and social boundaries included where they matter.</p>
+    </div>
+    <figure class="paper-figure "><a class="figure-frame" href="assets/figures/overview.webp" data-lightbox data-title="Figure 1. Overview of PsycheMME" data-vector="assets/figures/overview.pdf" aria-label="Enlarge Figure 1. Overview of PsycheMME"><img src="assets/figures/overview.webp" alt="Figure 1. Overview of PsycheMME" width="3000" height="1431" loading="lazy" decoding="async"><span class="zoom-hint"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 2H2v4m8-4h4v4M2 10v4h4m8-4v4h-4"/></svg> Enlarge</span></a><figcaption><strong>Figure 1.</strong> Diverse human-centric social situations; eight capabilities from social cues to interaction; and overall results for 17 models. <a class="vector-link" href="assets/figures/overview.pdf" target="_blank" rel="noopener">Vector PDF ↗</a></figcaption></figure>
+    <details class="details"><summary><span>A closer look at the benchmark <small>Composition &amp; statistics</small></span></summary>
+      <p class="composition-note">630 episodes across eight source groups support 890 choice questions and 110 open questions. The overview illustrates 16 scene categories. Uneven capability counts motivate macro averaging across the eight capabilities.</p>
+      <figure class="paper-figure "><a class="figure-frame" href="assets/figures/statistics.webp" data-lightbox data-title="Figure 4. Benchmark statistics" data-vector="assets/figures/statistics.pdf" aria-label="Enlarge Figure 4. Benchmark statistics"><img src="assets/figures/statistics.webp" alt="Figure 4. Benchmark statistics" width="3000" height="1333" loading="lazy" decoding="async"><span class="zoom-hint"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 2H2v4m8-4h4v4M2 10v4h4m8-4v4h-4"/></svg> Enlarge</span></a><figcaption><strong>Figure 4.</strong> Capability taxonomy, dataset composition, video duration, question length, and frequent keywords. <a class="vector-link" href="assets/figures/statistics.pdf" target="_blank" rel="noopener">Vector PDF ↗</a></figcaption></figure>
+    </details>
+  </div>
+</section>
+<section class="section results" id="results" aria-labelledby="results-title">
+  <div class="wrap">
+    <div class="section-header">
+      <div><p class="section-label">02 / Results</p><h2 id="results-title">Performance across eight diagnostic capabilities</h2></div>
+      <p class="section-intro"><strong>17 frozen models: 8 proprietary and 9 open-weight.</strong> All are evaluated on the same 1,000 questions under a shared input policy and scoring rubric. Two adapted checkpoints are evaluated separately.</p>
+    </div>
+    <figure class="paper-figure main-results-figure"><a class="figure-frame" href="assets/figures/results-overview.svg?v=2" data-lightbox data-title="Main results from Table 2" data-vector="assets/figures/results-overview.svg?v=2" data-vector-label="Vector SVG ↗" aria-label="Enlarge main results from Table 2"><img src="assets/figures/results-overview.svg?v=2" alt="Raw and Reasoning-Verified macro scores for 8 proprietary and 9 open-weight frozen models, plus the separate Qwen3.5-4B adaptation comparison" width="1530" height="520" loading="lazy" decoding="async"><span class="zoom-hint">Enlarge ↗</span></a><figcaption><strong>Main results.</strong> Raw Answer and Reasoning-Verified macro scores for (a) eight proprietary and (b) nine open-weight frozen models. (c) Qwen3.5-4B Base, SFT, and SFT+GRPO; the two adapted checkpoints are separate from the 17-model frozen comparison. All values are from Table 2. <a class="vector-link" href="assets/figures/results-overview.svg?v=2" target="_blank" rel="noopener">Vector SVG ↗</a></figcaption></figure>
+    <div class="results-visuals">
+<article class="chart-panel main-result-table">
+        <h3>Selected model comparisons</h3>
+        <div class="table-scroll" tabindex="0" role="region" aria-label="Selected overall scores from Table 2">
+          <table class="summary-table"><caption>Table 2 · overall macro scores (%)</caption><thead><tr><th scope="col">Model</th><th scope="col">Raw</th><th scope="col">Verified</th></tr></thead><tbody><tr class="highlight"><th scope="row">Gemini 3.6 Flash</th><td>85.68</td><td><strong>80.03</strong></td></tr><tr class=""><th scope="row">Claude Opus 5</th><td>82.34</td><td><strong>76.71</strong></td></tr><tr class=""><th scope="row">GPT-5.6 Sol</th><td>81.09</td><td><strong>75.98</strong></td></tr><tr class=""><th scope="row">Qwen3.8-Max</th><td>81.48</td><td><strong>75.59</strong></td></tr><tr class="highlight"><th scope="row">Qwen3.8-27B</th><td>79.97</td><td><strong>72.74</strong></td></tr><tr class=""><th scope="row">Qwen3.5-9B</th><td>76.54</td><td><strong>66.45</strong></td></tr></tbody></table>
+        </div>
+        <p class="table-note">Gemini 3.6 Flash leads the proprietary group; Qwen3.8-27B leads the open-weight group. All 17 frozen models and both adapted checkpoints are available in the complete table below.</p>
+        <p class="table-note">The Raw–Verified gap reflects reduced weighted credit under the fixed rationale rubric, including its normalization.</p>
+      </article>
+      <figure class="paper-figure diagnostic-figure"><a class="figure-frame" href="assets/figures/performance.webp" data-lightbox data-title="Figure 5. Performance breakdown" data-vector="assets/figures/performance.pdf" aria-label="Enlarge Figure 5. Performance breakdown"><img src="assets/figures/performance.webp" alt="Figure 5. Performance breakdown" width="2919" height="3000" loading="lazy" decoding="async"><span class="zoom-hint"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 2H2v4m8-4h4v4M2 10v4h4m8-4v4h-4"/></svg> Enlarge</span></a><figcaption><strong>Figure 5.</strong> Capability profiles, verification stages, credit distributions, and loss attribution. <a class="vector-link" href="assets/figures/performance.pdf" target="_blank" rel="noopener">Vector PDF ↗</a></figcaption></figure>
+    </div>
+    <details class="details" id="complete-results"><summary><span>Explore the complete model comparison <small>Table 2 · all capabilities</small></span></summary>
+      <div class="table-shell">
+        <div class="table-toolbar" role="group" aria-label="Filter model results">
+          <button class="filter" data-filter="frozen" aria-pressed="true" type="button">All frozen · 17</button>
+          <button class="filter" data-filter="proprietary" aria-pressed="false" type="button">Proprietary · 8</button>
+          <button class="filter" data-filter="open" aria-pressed="false" type="button">Open-weight · 9</button>
+          <button class="filter" data-filter="adapted" aria-pressed="false" type="button">Adapted · 2</button>
+        </div>
+        <div class="table-scroll" tabindex="0" role="region" aria-label="Complete results table, scroll horizontally for all capabilities">
+          <table class="main-table">
+            <caption id="results-caption" aria-live="polite">17 frozen models. Overall scores are macro means; capability columns are Reasoning-Verified scores (%).</caption>
+            <thead><tr><th rowspan="2" scope="col">Model</th><th colspan="2" scope="colgroup">Overall</th><th colspan="3" scope="colgroup">Human understanding</th><th colspan="3" scope="colgroup">Interaction decision</th><th colspan="2" scope="colgroup">Context &amp; constraints</th></tr><tr><th scope="col">Raw</th><th scope="col">Verified</th><th scope="col"><abbr title="Grounding">G</abbr></th><th scope="col"><abbr title="Psychological Understanding">W</abbr></th><th scope="col"><abbr title="Need">N</abbr></th><th scope="col"><abbr title="Timing">T</abbr></th><th scope="col"><abbr title="Verbal Response">S</abbr></th><th scope="col"><abbr title="Action">A</abbr></th><th scope="col"><abbr title="Memory">M</abbr></th><th scope="col"><abbr title="Risk">R</abbr></th></tr></thead>
+            <tbody><tr data-group="proprietary" class="leading"><th scope="row">Gemini 3.6 Flash</th><td>85.68</td><td class="verified">80.03</td><td>91.76</td><td>79.68</td><td>69.97</td><td class="timing">47.81</td><td>79.32</td><td>89.58</td><td>90.92</td><td>91.21</td></tr>
+<tr data-group="proprietary"><th scope="row">Claude Opus 5</th><td>82.34</td><td class="verified">76.71</td><td>89.31</td><td>77.80</td><td>69.10</td><td class="timing">40.70</td><td>79.18</td><td>86.24</td><td>86.56</td><td>84.82</td></tr>
+<tr data-group="proprietary"><th scope="row">GPT-5.6 Sol</th><td>81.09</td><td class="verified">75.98</td><td>92.13</td><td>78.75</td><td>67.28</td><td class="timing">32.99</td><td>74.86</td><td>84.25</td><td>91.11</td><td>86.47</td></tr>
+<tr data-group="proprietary"><th scope="row">Qwen3.8-Max</th><td>81.48</td><td class="verified">75.59</td><td>90.87</td><td>77.61</td><td>69.17</td><td class="timing">39.33</td><td>72.84</td><td>82.46</td><td>84.48</td><td>87.94</td></tr>
+<tr data-group="proprietary"><th scope="row">Kimi K3</th><td>80.60</td><td class="verified">75.35</td><td>91.52</td><td>76.11</td><td>60.62</td><td class="timing">38.82</td><td>79.38</td><td>84.28</td><td>85.17</td><td>86.87</td></tr>
+<tr data-group="proprietary"><th scope="row">Gemini 3.1 Pro</th><td>81.36</td><td class="verified">74.33</td><td>91.30</td><td>76.26</td><td>60.29</td><td class="timing">44.71</td><td>68.22</td><td>76.80</td><td>90.49</td><td>86.57</td></tr>
+<tr data-group="proprietary"><th scope="row">GLM-5V-Turbo</th><td>78.40</td><td class="verified">71.19</td><td>89.18</td><td>76.72</td><td>61.82</td><td class="timing">34.23</td><td>68.14</td><td>79.87</td><td>76.23</td><td>83.37</td></tr>
+<tr data-group="proprietary"><th scope="row">Seed 2.1 Pro</th><td>76.37</td><td class="verified">69.67</td><td>88.53</td><td>76.87</td><td>53.24</td><td class="timing">32.93</td><td>63.27</td><td>78.09</td><td>82.42</td><td>81.98</td></tr>
+<tr data-group="open" class="leading"><th scope="row">Qwen3.8-27B</th><td>79.97</td><td class="verified">72.74</td><td>90.93</td><td>80.53</td><td>66.96</td><td class="timing">28.58</td><td>68.87</td><td>83.01</td><td>77.77</td><td>85.27</td></tr>
+<tr data-group="open"><th scope="row">Qwen3.5-9B</th><td>76.54</td><td class="verified">66.45</td><td>90.24</td><td>76.86</td><td>54.66</td><td class="timing">29.13</td><td>62.63</td><td>73.45</td><td>68.14</td><td>76.52</td></tr>
+<tr data-group="open"><th scope="row">Gemma-4-12B-it</th><td>66.41</td><td class="verified">57.75</td><td>79.48</td><td>71.19</td><td>46.41</td><td class="timing">13.49</td><td>49.43</td><td>62.32</td><td>65.07</td><td>74.58</td></tr>
+<tr data-group="open"><th scope="row">InternVL3.5-14B</th><td>52.24</td><td class="verified">44.68</td><td>63.36</td><td>56.63</td><td>19.90</td><td class="timing">15.63</td><td>34.05</td><td>45.10</td><td>59.53</td><td>63.22</td></tr>
+<tr data-group="open"><th scope="row">MiniCPM-V4.5</th><td>69.65</td><td class="verified">58.13</td><td>81.26</td><td>70.63</td><td>33.81</td><td class="timing">24.32</td><td>50.08</td><td>62.45</td><td>65.40</td><td>77.13</td></tr>
+<tr data-group="open"><th scope="row">InternVL3.5-8B</th><td>67.41</td><td class="verified">55.41</td><td>72.30</td><td>64.39</td><td>35.38</td><td class="timing">20.65</td><td>50.37</td><td>59.32</td><td>72.20</td><td>68.67</td></tr>
+<tr data-group="open"><th scope="row">Phi-4-multimodal</th><td>61.03</td><td class="verified">48.63</td><td>52.50</td><td>50.32</td><td>22.14</td><td class="timing">20.85</td><td>45.96</td><td>58.17</td><td>64.63</td><td>74.44</td></tr>
+<tr data-group="open"><th scope="row">InternVL3.5-4B</th><td>61.30</td><td class="verified">48.97</td><td>72.46</td><td>60.06</td><td>26.90</td><td class="timing">21.61</td><td>37.44</td><td>47.00</td><td>63.74</td><td>62.54</td></tr>
+<tr data-group="open"><th scope="row">Qwen3.5-4B</th><td>47.68</td><td class="verified">37.71</td><td>60.70</td><td>46.49</td><td>34.18</td><td class="timing">23.17</td><td>24.02</td><td>35.85</td><td>33.61</td><td>43.66</td></tr>
+<tr data-group="adapted" hidden><th scope="row">Qwen3.5-4B (SFT)</th><td>72.58</td><td class="verified">52.13</td><td>82.73</td><td>67.83</td><td>36.92</td><td class="timing">15.16</td><td>48.02</td><td>59.38</td><td>47.45</td><td>59.59</td></tr>
+<tr data-group="adapted" hidden><th scope="row">Qwen3.5-4B (SFT+GRPO)</th><td>73.19</td><td class="verified">52.62</td><td>83.43</td><td>67.75</td><td>37.64</td><td class="timing">17.24</td><td>47.68</td><td>60.82</td><td>46.53</td><td>59.86</td></tr>
+</tbody>
+          </table>
+        </div>
+        <p class="table-footnote">G Grounding · W Psychological Understanding · N Need · T Timing · S Verbal Response · A Action · M Memory · R Risk. The two adapted checkpoints are excluded from the 17-model frozen comparison.</p>
+      </div>
+      <noscript><p class="composition-note">The table shows all frozen models. The two adapted checkpoints are listed in the paper and the adaptation summary below.</p></noscript>
+    </details>
+    <div class="findings">
+      <article class="finding"><p class="mini-label">Finding 01 / Timing</p><h3>Interaction Timing remains challenging.</h3><p>Timing has the lowest Verified score and credit retention for <strong>all 17 frozen models</strong>. Among correct single-choice responses, weak or contradicted cue support occurs in 49.74% of Timing responses, versus 7.62% for the other capabilities.</p></article>
+      <article class="finding"><p class="mini-label">Finding 02 / Completeness</p><h3>Similar Need scores conceal completeness differences.</h3><p>Gemini 3.6 Flash and Claude Opus 5 have similar Need Verified scores (69.97 / 69.10). On the same 35 open Need questions, their full-credit rates are <strong>28.57% / 68.57%</strong>, revealing a difference in answer completeness.</p></article>
+      <article class="finding"><p class="mini-label">Finding 03 / Consensus</p><h3>Voting can override correct minority answers.</h3><p>For the eight proprietary models on 72 Timing questions, oracle answer coverage reaches 91.67%, while plurality voting reaches 57.64% and the best individual model reaches 66.67%. <strong>Shared wrong choices can outvote correct minority answers.</strong></p></article>
+      <article class="finding"><p class="mini-label">Finding 04 / Context</p><h3>Performance depends on relevant context.</h3><p>Full inputs improve Raw scores over Question-only by 12.50 points for Qwen3.5-9B and 12.43 for MiniCPM-V4.5. In the Memory intervention, gains depend on <strong>matched, relevant history</strong>.</p></article>
+    </div>
+    <div class="context-grid">
+      <article class="chart-panel">
+        <h3>Input ablations</h3><p class="chart-subtitle">Table 3 · same 1,000 questions · macro scores (%)</p>
+        <div class="table-scroll" tabindex="0" role="region" aria-label="Input ablation table, horizontally scrollable">
+          <table class="compact-table"><thead><tr><th rowspan="2" scope="col">Input</th><th colspan="2" scope="colgroup">Qwen3.5-9B</th><th colspan="2" scope="colgroup">MiniCPM-V4.5</th></tr><tr><th scope="col">Raw</th><th scope="col">Ver.</th><th scope="col">Raw</th><th scope="col">Ver.</th></tr></thead><tbody>
+          <tr><th scope="row">Question-only</th><td>64.04</td><td>57.05</td><td>57.22</td><td>49.93</td></tr>
+          <tr><th scope="row">ASR-only</th><td>67.04</td><td>57.75</td><td>60.05</td><td>49.36</td></tr>
+          <tr><th scope="row">Visual-only</th><td>73.44</td><td>65.50</td><td>65.67</td><td>55.56</td></tr>
+          <tr class="full"><th scope="row">Full</th><td><strong>76.54</strong></td><td><strong>66.45</strong></td><td><strong>69.65</strong></td><td><strong>58.13</strong></td></tr>
+          <tr><th scope="row">Single-image</th><td>72.28</td><td>61.78</td><td>66.16</td><td>54.99</td></tr>
+          </tbody></table>
+        </div>
+        <p class="chart-note">Visual-only retains most Full accuracy. ASR adds another 3.10 / 3.98 Raw points. Single-image uses one midpoint frame with the remaining inputs fixed.</p>
+      </article>
+      <figure class="chart-panel memory-panel" id="memory-intervention">
+        <h3>Memory intervention</h3><p class="chart-subtitle">Table 4 · Qwen3.5-9B · 40 Memory questions / 24 episodes</p>
+        <div class="legend" aria-label="Chart legend"><span><i></i>Raw Answer</span><span><i></i>Reasoning-Verified</span></div><div class="memory-chart"><div class="score-row" style="--raw:42.50;--verified:25.28"><div class="score-row-head"><span>No History </span><span class="score-values"><span>42.50</span><strong>25.28</strong></span></div><div class="bar-track" aria-hidden="true"><span class="bar-raw"></span><span class="bar-verified"></span></div></div><div class="score-row" style="--raw:45.00;--verified:23.87"><div class="score-row-head"><span>Mismatched History </span><span class="score-values"><span>45.00</span><strong>23.87</strong></span></div><div class="bar-track" aria-hidden="true"><span class="bar-raw"></span><span class="bar-verified"></span></div></div><div class="score-row" style="--raw:82.50;--verified:74.55"><div class="score-row-head"><span>Matched History </span><span class="score-values"><span>82.50</span><strong>74.55</strong></span></div><div class="bar-track" aria-hidden="true"><span class="bar-raw"></span><span class="bar-verified"></span></div></div></div>
+        <figcaption class="chart-note">Micro scores (%). Mismatched History averages three seeds. Matched History improves Raw by 40.00 points and Verified by 49.27 points over No History.</figcaption>
+      </figure>
+    </div>
+    <details class="details"><summary><span>Task adaptation &amp; human reference <small>Tables 2 &amp; 5</small></span></summary>
+      <div class="table-shell"><div class="table-scroll" tabindex="0" role="region" aria-label="Task adaptation scores"><table><caption>Qwen3.5-4B adaptation · same 1,000 questions · macro scores (%)</caption><thead><tr><th scope="col">Checkpoint</th><th scope="col">Raw</th><th scope="col">Verified</th></tr></thead><tbody><tr><th scope="row">Base</th><td>47.68</td><td>37.71</td></tr><tr><th scope="row">SFT</th><td>72.58</td><td>52.13</td></tr><tr><th scope="row">SFT+GRPO</th><td>73.19</td><td>52.62</td></tr></tbody></table></div></div>
+      <div class="supporting-result"><p><strong>Human baseline.</strong> Five annotators independently answer 300 sampled questions (1,500 responses): 85.27% Raw micro accuracy and 84.82% Raw macro accuracy. This is a sampled subset.</p><p><strong>Judge review.</strong> Five psychology experts endorse 1,352 of 1,500 presented Judge decisions (90.13%) across 300 sampled cases. This measures endorsement of the presented decisions.</p></div>
+    </details>
+  </div>
+</section>
+<section class="section method" id="method" aria-labelledby="method-title">
+  <div class="wrap">
+    <div class="section-header">
+      <div><p class="section-label">03 / Methodology</p><h2 id="method-title">From video selection to verified scores</h2></div>
+      <p class="section-intro">Questions are generated, answered independently and reviewed by experts before the benchmark is frozen. Evaluation then scores the answer and the evidence given for it.</p>
+    </div>
+    <div class="method-block">
+      <div class="block-heading"><span class="block-index">A /</span><h3>Capability taxonomy</h3></div>
+      <p class="block-copy">Social Information Processing and the Perception-Action Cycle guide the eight capabilities: what can be observed, what is inferred about a person, and how to respond.</p>
+      <div class="capability-layout"><figure class="paper-figure method-scenario"><a class="figure-frame" href="assets/figures/capabilities.webp" data-lightbox data-title="Figure 2. Illustrative scenarios and capabilities" data-vector="assets/figures/capabilities.pdf" aria-label="Enlarge Figure 2. Illustrative scenarios and capabilities"><img src="assets/figures/capabilities.webp" alt="Figure 2. Illustrative scenarios and capabilities" width="3000" height="1613" loading="lazy" decoding="async"><span class="zoom-hint"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 2H2v4m8-4h4v4M2 10v4h4m8-4v4h-4"/></svg> Enlarge</span></a><figcaption><strong>Figure 2.</strong> Human understanding, interaction decisions, memory, and social constraints in an illustrative egocentric scenario adapted from CASTLE. <a class="vector-link" href="assets/figures/capabilities.pdf" target="_blank" rel="noopener">Vector PDF ↗</a></figcaption></figure><div class="capability-sidebar"><div class="taxonomy">
+        <div class="taxonomy-group"><h4>Human understanding</h4><div class="capability"><b>G</b>Grounding <small>186 questions</small></div><div class="capability"><b>W</b>Psychological Understanding <small>320</small></div><div class="capability"><b>N</b>Need <small>97</small></div></div>
+        <div class="taxonomy-group"><h4>Interaction decision</h4><div class="capability"><b>T</b>Timing <small>72 questions</small></div><div class="capability"><b>S</b>Verbal Response <small>97</small></div><div class="capability"><b>A</b>Action <small>94</small></div></div>
+        <div class="taxonomy-group"><h4>Context &amp; constraints</h4><div class="capability"><b>M</b>Memory <small>61 questions</small></div><div class="capability"><b>R</b>Risk <small>73</small></div></div>
+      </div></div></div>
+    </div>
+    <div class="method-block">
+      <div class="block-heading"><span class="block-index">B /</span><h3>Benchmark construction</h3></div>
+      <p class="block-copy">Video curation combines six public datasets with public vlogs, interviews, and daily-life recordings. Human screening assisted by VLMs selects episodes with observable social cues and adequate visual quality.</p>
+      <figure class="paper-figure "><a class="figure-frame" href="assets/figures/construction.webp" data-lightbox data-title="Figure 3. Benchmark construction framework" data-vector="assets/figures/construction.pdf" aria-label="Enlarge Figure 3. Benchmark construction framework"><img src="assets/figures/construction.webp" alt="Figure 3. Benchmark construction framework" width="3000" height="1076" loading="lazy" decoding="async"><span class="zoom-hint"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 2H2v4m8-4h4v4M2 10v4h4m8-4v4h-4"/></svg> Enlarge</span></a><figcaption><strong>Figure 3.</strong> Video collection, multi-agent QA generation with independent answers, and human quality review. <a class="vector-link" href="assets/figures/construction.pdf" target="_blank" rel="noopener">Vector PDF ↗</a></figcaption></figure>
+      <div class="agent-steps">
+        <article><p class="mini-label">01 / Question Agent</p><h4>Propose a grounded question.</h4><p>Generate a question, candidate answer, options where applicable, and supporting cues, guided by the target capability.</p></article>
+        <article><p class="mini-label">02 / Answer Agent</p><h4>Answer independently.</h4><p>Re-examine the video using the question, options, and public context. The proposed answer, private cues, and rationale are withheld.</p></article>
+        <article><p class="mini-label">03 / Critic Agent</p><h4>Check both reasoning paths.</h4><p>Review answerability, cue support, and logical coherence. Unresolved candidates are discarded after at most two refinement rounds.</p></article>
+      </div>
+      <p class="review-note"><strong>Five independent reviewers.</strong><span>Researchers with psychology backgrounds check validity, correctness, and psychological consistency. Only unanimously approved items enter the frozen benchmark.</span></p>
+    </div>
+    <div class="method-block">
+      <div class="block-heading"><span class="block-index">C /</span><h3>Reasoning-Verified evaluation.</h3></div>
+      <div class="evaluation-grid">
+        <div>
+          <article class="metric-description"><h4>Raw Answer</h4><p>Choice answers must exactly match the reference option or complete option set. A fixed semantic Judge assigns open answers zero, partial (0.5), or full credit.</p></article>
+          <article class="metric-description"><h4>Reasoning-Verified</h4><p>Weight answer credit by the presence of an informative rationale, support from annotated reference cues, and logical integrity. Qwen3.8-27B serves as the fixed Judge; private references enter scoring only.</p><div class="rubric-points"><span>Answer correctness</span><span>Informative rationale</span><span>Evidence Support</span><span>Logical Integrity</span></div></article>
+          <p class="composition-note">Both headline metrics are macro-averaged across the eight capabilities. Evaluation concerns offline judgments in recorded interactions.</p>
+        </div>
+        <aside class="equation-panel" aria-label="Reasoning-Verified formula from Section 3.5">
+          <span class="mini-label">Section 3.5 / The scoring rule</span>
+          <div class="equation" aria-label="s i equals a i times c i times e i times ell i divided by lambda squared">s<sub>i</sub> = a<sub>i</sub> c<sub>i</sub> e<sub>i</sub> ℓ<sub>i</sub> / λ<sup>2</sup></div>
+          <p><strong>λ = 1.2.</strong> Answer correctness a<sub>i</sub> ∈ [0, 1]; rationale coverage c<sub>i</sub> ∈ {0, 1}; cue support e<sub>i</sub> and logical integrity ℓ<sub>i</sub> ∈ [0, λ].</p>
+          <p class="normalization">With a correct answer, an informative rationale, normal support, and acceptable logic, credit is 1 / 1.44 ≈ <strong>69.44%</strong>. The Raw–Verified gap includes this fixed normalization; it cannot be attributed entirely to reasoning failure.</p>
+        </aside>
+      </div>
+    </div>
+<div class="rubric-lab" aria-labelledby="rubric-title"><div><p class="section-label">Scoring example</p><h3 id="rubric-title">How rationale labels change the score</h3><p>Change the answer credit and Judge labels to see how they enter the scoring rule. This illustration assumes a valid response with an informative rationale; it does not run a new evaluation.</p></div><div class="rubric-controls"><label>Answer credit<select id="rubric-answer" aria-label="Answer credit"><option value="1">Correct</option><option value="0.5">Partially correct (open only)</option><option value="0">Incorrect</option></select></label><label>Evidence support<select id="rubric-support" aria-label="Evidence support"><option value="1.2" data-detail="×1.2">Strong support</option><option value="1" data-detail="×1">Normal support</option><option value="0.8" data-detail="×0.8">Weak support</option><option value="0.5" data-detail="×0.5">Contradicted</option><option value="0" data-detail="×0">Insufficient</option></select></label><label>Logical consistency<select id="rubric-logic" aria-label="Logical consistency"><option value="1.2" data-detail="×1.2">Fully coherent</option><option value="1" data-detail="×1">Acceptable</option><option value="0.8" data-detail="×0.8">Weak logic</option><option value="0.5" data-detail="×0.5">Contradictory</option><option value="0" data-detail="×0">Unevaluable</option></select></label></div><div class="rubric-result" aria-live="polite"><div><span>Raw credit</span><output id="rubric-raw">100.00%</output></div><div><span>Verified credit</span><output id="rubric-verified">100.00%</output></div><p id="rubric-formula">1 × 1.2 × 1.2 ÷ 1.44 = 1.0000</p></div><p class="rubric-note">Verified = answer credit × rationale coverage × evidence support × logical consistency ÷ 1.44. This illustration fixes coverage at present (×1). Invalid final-format responses receive zero answer credit. <a href="https://github.com/psychemme/PsycheMME/blob/main/docs/EVALUATION.md" target="_blank" rel="noopener">Full scoring contract ↗</a></p></div>
+  </div>
+</section>
+<section class="section cases" id="cases" aria-labelledby="cases-title">
+  <div class="wrap">
+    <div class="section-header">
+      <div><p class="section-label">04 / Case Study</p><h2 id="cases-title">Illustrative model responses</h2></div>
+      <p class="section-intro">The paper’s four examples compare model responses with supplied context and frozen references. The Gemini example is especially diagnostic: the answer matches, but the cited conversation falls outside the queried time window.</p>
+    </div>
+    <figure class="paper-figure "><a class="figure-frame" href="assets/figures/cases.webp" data-lightbox data-title="Figure 6. Illustrative model responses" data-vector="assets/figures/cases.pdf" aria-label="Enlarge Figure 6. Illustrative model responses"><img src="assets/figures/cases.webp" alt="Figure 6. Illustrative model responses" width="3000" height="1470" loading="lazy" decoding="async"><span class="zoom-hint"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 2H2v4m8-4h4v4M2 10v4h4m8-4v4h-4"/></svg> Enlarge</span></a><figcaption><strong>Figure 6.</strong> Preference mismatch, temporal cue mismatch, interaction-timing disagreement, and goal substitution. Cases and outputs are reproduced from the paper. They illustrate specific discrepancies, not their prevalence across the benchmark. <a class="vector-link" href="assets/figures/cases.pdf" target="_blank" rel="noopener">Vector PDF ↗</a></figcaption></figure>
+    <div class="case-notes">
+      <article class="case-note"><p class="mini-label">Claude Opus 5 / Memory</p><h3>Preference mismatch</h3><p>The supplied history specifies a preference for less personal follow-up. The response asks for more details, conflicting with that context.</p></article>
+      <article class="case-note"><p class="mini-label">Gemini 3.1 Pro / Response</p><h3>Temporal mismatch</h3><p>The selected response strategy is correct, but its rationale cites a later conversation window rather than the queried interval.</p></article>
+      <article class="case-note"><p class="mini-label">GPT-5.6 Sol / Timing</p><h3>Timing disagreement</h3><p>The prediction anchors waiting to a later speech boundary than the frozen reference, illustrating a disagreement about the annotated timing interval.</p></article>
+      <article class="case-note"><p class="mini-label">Qwen3.8-Max / Need</p><h3>Goal substitution</h3><p>A fulfilled inquiry about why redwoods were cut is interpreted as an unmet request by substituting a different goal.</p></article>
+    </div>
+<div class="case-examples" id="examples" aria-labelledby="examples-title">
+  <div class="case-examples-inner">
+    <div class="section-header"><div><p class="section-label">Illustrative questions</p><h3 id="examples-title">A closer look at a question</h3></div><p class="section-intro">Choose a capability and read a question. You can reveal its reference answer below. These are text previews; the original video and transcript are needed for evaluation.</p></div>
+    <div class="sample-toolbar"><label for="sample-capability">Capability</label><select id="sample-capability"><option value="G">G · Grounding</option><option value="W">W · Psychological Understanding</option><option value="N" selected>N · Need</option><option value="T">T · Timing</option><option value="S">S · Verbal Response</option><option value="A">A · Action</option><option value="M">M · Memory</option><option value="R">R · Risk</option></select><span id="sample-meta"></span></div>
+    <div id="sample-content" aria-live="polite"><p class="sample-loading">Loading illustrative text examples… <a href="https://huggingface.co/datasets/psychemme/PsycheMME" target="_blank" rel="noopener">Release updates ↗</a></p></div>
+    <p class="sample-license">Text from EasyCom (<a href="assets/EasyCom_CC_BY_NC_4.0.txt" target="_blank" rel="noopener">CC BY-NC 4.0</a>) and IndEgo (<a href="assets/IndEgo_CC_BY_4.0.txt" target="_blank" rel="noopener">CC BY 4.0</a>) · <a href="assets/EXAMPLE_NOTICES.md" target="_blank" rel="noopener">Attribution and selection notes</a>. Original question wording and review metadata are preserved. Text inspection does not certify video-level correctness.</p>
+
+  </div>
+</div>
+  </div>
+</section>
+<section class="section resources" id="resources" aria-labelledby="resources-title">
+  <div class="wrap">
+    <div class="section-header">
+      <div><p class="section-label">05 / Release</p><h2 id="resources-title">Code, models, data and evaluation logs</h2></div>
+      <p class="section-intro">Code and models are available. Dataset and evaluation logs are coming soon.</p>
+    </div>
+    <div class="resource-list"><a class="resource-item" data-resource="code" href="https://github.com/psychemme/PsycheMME" target="_blank" rel="noopener"><span class="resource-icon"><img class="platform-mark" src="assets/icons/github.svg" alt="" width="20" height="20" aria-hidden="true"></span><span class="resource-name">Code</span><span class="resource-description">Installable inference, Judge and scoring tools; frozen score-factor replay.</span><span class="resource-status">Open resource ↗</span></a>
+<a class="resource-item" data-resource="models" href="https://huggingface.co/psychemme" target="_blank" rel="noopener"><span class="resource-icon"><img class="platform-mark" src="assets/icons/huggingface.svg" alt="" width="20" height="20" aria-hidden="true"></span><span class="resource-name">Trained Models</span><span class="resource-description">SFT and GRPO model adapters.</span><span class="resource-status">Open resource ↗</span></a>
+<a class="resource-item" data-resource="dataset" href="https://huggingface.co/datasets/psychemme/PsycheMME" target="_blank" rel="noopener"><span class="resource-icon"><img class="platform-mark" src="assets/icons/huggingface.svg" alt="" width="20" height="20" aria-hidden="true"></span><span class="resource-name">Dataset</span><span class="resource-description">PsycheMME dataset.</span><span class="resource-status">Coming Soon</span></a>
+<a class="resource-item" data-resource="logs" href="https://huggingface.co/datasets/psychemme/PsycheMME#coming-soon" target="_blank" rel="noopener"><span class="resource-icon"><img class="platform-mark" src="assets/icons/huggingface.svg" alt="" width="20" height="20" aria-hidden="true"></span><span class="resource-name">Evaluation Logs</span><span class="resource-description">Evaluation outputs and logs.</span><span class="resource-status">Coming Soon</span></a>
+</div>
+    <p class="availability-note">Dataset and evaluation logs: Coming Soon.</p>
+  </div>
+</section>
+<section class="section getting-started" id="start" aria-labelledby="start-title">
+  <div class="wrap">
+    <div class="section-header"><div><p class="section-label">Start here</p><h2 id="start-title">Understand it. Run it. Build on it.</h2></div><p class="section-intro">Start with an offline example, check the archived results, or connect your model. Each path explains what you need and what you should see.</p></div>
+    <div class="start-tabs" role="tablist" aria-label="Choose a starting point">
+      <button id="tab-demo" role="tab" aria-controls="panel-demo" aria-selected="true" type="button">01 · Try the offline demo</button>
+      <button id="tab-replay" role="tab" aria-controls="panel-replay" aria-selected="false" type="button">02 · Replay paper scores</button>
+      <button id="tab-model" role="tab" aria-controls="panel-model" aria-selected="false" type="button">03 · Evaluate your model</button>
+    </div>
+    <div class="start-panel" id="panel-demo" role="tabpanel" aria-labelledby="tab-demo">
+      <div class="start-copy"><span class="path-tag">Python 3.10+ · no GPU or API key</span><h3>Your first checked result</h3><p>Eight synthetic items show how answers, rationale weights and failures become scores. Separate files make each step inspectable.</p><p class="expected-output"><strong>Expected:</strong> Raw 75.00% · Verified 71.18%<br>Software demonstration; no real model or Judge calls.</p><a href="https://github.com/psychemme/PsycheMME/blob/main/docs/QUICKSTART.md" target="_blank" rel="noopener">Step-by-step guide ↗</a></div>
+      <div class="command-box"><button type="button" class="copy-command" data-copy="demo-command">Copy commands</button><pre id="demo-command" tabindex="0"><code>git clone https://github.com/psychemme/PsycheMME.git
+cd PsycheMME
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install .
+psychemme doctor
+psychemme demo --output runs/demo</code></pre></div>
+    </div>
+    <div class="start-panel" id="panel-replay" role="tabpanel" aria-labelledby="tab-replay">
+      <div class="start-copy"><span class="path-tag">Coming Soon</span><h3>Paper-score replay</h3><p>Coming Soon.</p><a href="https://huggingface.co/datasets/psychemme/PsycheMME" target="_blank" rel="noopener">Release updates ↗</a></div>
+    </div>
+    <div class="start-panel" id="panel-model" role="tabpanel" aria-labelledby="tab-model">
+      <div class="start-copy"><span class="path-tag">Coming Soon</span><h3>Evaluate your model</h3><p>Dataset: Coming Soon.</p><a href="https://github.com/psychemme/PsycheMME/blob/main/docs/MODEL_INTEGRATION.md" target="_blank" rel="noopener">Model integration guide ↗</a></div>
+    </div>
+    <p class="start-footnote">The offline synthetic demo and model checkpoints are available. Dataset and evaluation-log downloads are coming soon; follow <a href="https://huggingface.co/datasets/psychemme/PsycheMME" target="_blank" rel="noopener">the release page ↗</a> for updates.</p>
+    <span class="sr-only" id="copy-status" role="status" aria-live="polite"></span>
+  </div>
+</section>
+</main>
+<footer class="site-footer"><div class="wrap footer-inner"><span class="footer-brand">PsycheMME</span><p>Anonymous academic project page. Author and affiliation information is withheld for review.</p><a href="https://github.com/psychemme/psychemme.github.io" target="_blank" rel="noopener">Website source ↗</a></div></footer>
+<dialog class="lightbox" aria-labelledby="lightbox-title">
+  <div class="lightbox-header"><p class="lightbox-title" id="lightbox-title">Paper figure</p><div class="lightbox-tools"><a class="lightbox-vector" href="assets/figures/overview.pdf" target="_blank" rel="noopener">Vector PDF ↗</a><button class="lightbox-close" type="button" aria-label="Close enlarged figure">×</button></div></div>
+  <div class="lightbox-body"><img alt=""></div>
+</dialog>
+</body>
+</html>

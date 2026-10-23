@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="css/refinements.css?v=2">
   <link rel="stylesheet" href="css/reader.css?v=2">
   <link rel="stylesheet" href="css/layout-trial.css?v=1">
-  <script src="js/resources.js?v=4" defer></script>
+  <script src="js/resources.js?v=5" defer></script>
   <script src="js/main.js?v=10" defer></script>
   <script src="js/select.js?v=1" defer></script>
   <script src="js/onboarding.js?v=4" defer></script>
@@ -38,9 +38,10 @@
   <div class="wrap">
     <h1 id="paper-title"><span class="title-line"><span class="title-project">PsycheMME:</span> A Psychology-Informed Benchmark</span><span class="title-line">for Social Understanding and Interaction in Videos</span></h1>
     <p class="anonymous-submission">Anonymous ACL submission · project page</p>
+    <p class="hero-scope"><a href="https://arxiv.org/abs/2610.28625v1" target="_blank" rel="noopener">Paper · arXiv:2610.28625</a></p>
     <p class="hero-copy"><strong>PsycheMME</strong> evaluates how video models infer people’s states and needs, choose a response, and support that choice with evidence.</p>
     <p class="hero-scope">The benchmark contains 1,000 questions from 630 video episodes across eight psychology-informed capabilities.</p>
-    <div class="hero-actions" aria-label="Project resources"><a class="button" data-resource="code" href="https://github.com/psychemme/PsycheMME" target="_blank" rel="noopener"><img class="platform-mark" src="assets/icons/github-white.svg" alt="" width="20" height="20" aria-hidden="true"> Code</a><a class="button" data-resource="dataset" href="https://huggingface.co/datasets/psychemme/PsycheMME" target="_blank" rel="noopener"><img class="platform-mark" src="assets/icons/huggingface.svg" alt="" width="20" height="20" aria-hidden="true"> Dataset</a><a class="button" data-resource="models" href="https://huggingface.co/psychemme" target="_blank" rel="noopener"><img class="platform-mark" src="assets/icons/huggingface.svg" alt="" width="20" height="20" aria-hidden="true"> Models</a><a class="button" data-resource="logs" href="https://huggingface.co/datasets/psychemme/PsycheMME#coming-soon" target="_blank" rel="noopener"><img class="platform-mark" src="assets/icons/huggingface.svg" alt="" width="20" height="20" aria-hidden="true"> Evaluation Logs</a></div>
+    <div class="hero-actions" aria-label="Project resources"><a class="button" data-resource="code" href="https://github.com/psychemme/PsycheMME" target="_blank" rel="noopener"><img class="platform-mark" src="assets/icons/github-white.svg" alt="" width="20" height="20" aria-hidden="true"> Code</a><a class="button" data-resource="dataset" href="https://huggingface.co/datasets/psychemme/PsycheMME" target="_blank" rel="noopener"><img class="platform-mark" src="assets/icons/huggingface.svg" alt="" width="20" height="20" aria-hidden="true"> Dataset</a><a class="button" data-resource="models" href="https://huggingface.co/psychemme/models" target="_blank" rel="noopener"><img class="platform-mark" src="assets/icons/huggingface.svg" alt="" width="20" height="20" aria-hidden="true"> Models</a><a class="button" data-resource="logs" href="https://huggingface.co/datasets/psychemme/PsycheMME-logs" target="_blank" rel="noopener"><img class="platform-mark" src="assets/icons/huggingface.svg" alt="" width="20" height="20" aria-hidden="true"> Evaluation Logs</a></div>
   </div>
 </section>
 <section class="section overview" id="overview" aria-labelledby="overview-title">
@@ -175,7 +176,7 @@
       <div class="evaluation-grid">
         <div>
           <article class="metric-description"><h4>Raw Answer</h4><p>Choice answers must exactly match the reference option or complete option set. A fixed semantic Judge assigns open answers zero, partial (0.5), or full credit.</p></article>
-          <article class="metric-description"><h4>Reasoning-Verified</h4><p>Weight answer credit by the presence of an informative rationale, support from annotated reference cues, and logical integrity. Qwen3.8-27B serves as the fixed Judge; private references enter scoring only.</p><div class="rubric-points"><span>Answer correctness</span><span>Informative rationale</span><span>Evidence Support</span><span>Logical Integrity</span></div></article>
+          <article class="metric-description"><h4>Reasoning-Verified</h4><p>Weight answer credit by the presence of an informative rationale, support from annotated reference cues, and logical integrity. Qwen3.8-27B serves as the fixed Judge; reference answers enter scoring only.</p><div class="rubric-points"><span>Answer correctness</span><span>Informative rationale</span><span>Evidence Support</span><span>Logical Integrity</span></div></article>
           <p class="composition-note">Both headline metrics are macro-averaged across the eight capabilities. Evaluation concerns offline judgments in recorded interactions.</p>
         </div>
         <aside class="equation-panel" aria-label="Reasoning-Verified formula from Section 3.5">
@@ -219,17 +220,17 @@
       <div><p class="section-label">05 / Release</p><h2 id="resources-title">Code, models, data and evaluation logs</h2></div>
       <p class="section-intro">Code and models are available. Dataset and evaluation logs are coming soon.</p>
     </div>
-    <div class="resource-list"><a class="resource-item" data-resource="code" href="https://github.com/psychemme/PsycheMME" target="_blank" rel="noopener"><span class="resource-icon"><img class="platform-mark" src="assets/icons/github.svg" alt="" width="20" height="20" aria-hidden="true"></span><span class="resource-name">Code</span><span class="resource-description">Installable inference, Judge and scoring tools; frozen score-factor replay.</span><span class="resource-status">Open resource ↗</span></a>
-<a class="resource-item" data-resource="models" href="https://huggingface.co/psychemme" target="_blank" rel="noopener"><span class="resource-icon"><img class="platform-mark" src="assets/icons/huggingface.svg" alt="" width="20" height="20" aria-hidden="true"></span><span class="resource-name">Trained Models</span><span class="resource-description">SFT and GRPO model adapters.</span><span class="resource-status">Open resource ↗</span></a>
+    <div class="resource-list"><a class="resource-item" data-resource="code" href="https://github.com/psychemme/PsycheMME" target="_blank" rel="noopener"><span class="resource-icon"><img class="platform-mark" src="assets/icons/github.svg" alt="" width="20" height="20" aria-hidden="true"></span><span class="resource-name">Code</span><span class="resource-description">Installable inference, Judge and scoring tools; paper-result reproduction.</span><span class="resource-status">Open resource ↗</span></a>
+<a class="resource-item" data-resource="models" href="https://huggingface.co/psychemme/models" target="_blank" rel="noopener"><span class="resource-icon"><img class="platform-mark" src="assets/icons/huggingface.svg" alt="" width="20" height="20" aria-hidden="true"></span><span class="resource-name">Trained Models</span><span class="resource-description">SFT and GRPO model adapters.</span><span class="resource-status">Open resource ↗</span></a>
 <a class="resource-item" data-resource="dataset" href="https://huggingface.co/datasets/psychemme/PsycheMME" target="_blank" rel="noopener"><span class="resource-icon"><img class="platform-mark" src="assets/icons/huggingface.svg" alt="" width="20" height="20" aria-hidden="true"></span><span class="resource-name">Dataset</span><span class="resource-description">PsycheMME dataset.</span><span class="resource-status">Coming Soon</span></a>
-<a class="resource-item" data-resource="logs" href="https://huggingface.co/datasets/psychemme/PsycheMME#coming-soon" target="_blank" rel="noopener"><span class="resource-icon"><img class="platform-mark" src="assets/icons/huggingface.svg" alt="" width="20" height="20" aria-hidden="true"></span><span class="resource-name">Evaluation Logs</span><span class="resource-description">Evaluation outputs and logs.</span><span class="resource-status">Coming Soon</span></a>
+<a class="resource-item" data-resource="logs" href="https://huggingface.co/datasets/psychemme/PsycheMME-logs" target="_blank" rel="noopener"><span class="resource-icon"><img class="platform-mark" src="assets/icons/huggingface.svg" alt="" width="20" height="20" aria-hidden="true"></span><span class="resource-name">Evaluation Logs</span><span class="resource-description">Evaluation outputs and logs.</span><span class="resource-status">Coming Soon</span></a>
 </div>
     <p class="availability-note">Dataset and evaluation logs: Coming Soon.</p>
   </div>
 </section>
 <section class="section getting-started" id="start" aria-labelledby="start-title">
   <div class="wrap">
-    <div class="section-header"><div><p class="section-label">Start here</p><h2 id="start-title">Understand it. Run it. Build on it.</h2></div><p class="section-intro">Start with an offline example, check the archived results, or connect your model. Each path explains what you need and what you should see.</p></div>
+    <div class="section-header"><div><p class="section-label">Start here</p><h2 id="start-title">Understand it. Run it. Build on it.</h2></div><p class="section-intro">Start with an offline example, reproduce the paper results, or connect your model. Each path explains what you need and what you should see.</p></div>
     <div class="start-tabs" role="tablist" aria-label="Choose a starting point">
       <button id="tab-demo" role="tab" aria-controls="panel-demo" aria-selected="true" type="button">01 · Try the offline demo</button>
       <button id="tab-replay" role="tab" aria-controls="panel-replay" aria-selected="false" type="button">02 · Replay paper scores</button>
@@ -246,12 +247,13 @@ psychemme doctor
 psychemme demo --output runs/demo</code></pre></div>
     </div>
     <div class="start-panel" id="panel-replay" role="tabpanel" aria-labelledby="tab-replay">
-      <div class="start-copy"><span class="path-tag">Coming Soon</span><h3>Paper-score replay</h3><p>Coming Soon.</p><a href="https://huggingface.co/datasets/psychemme/PsycheMME" target="_blank" rel="noopener">Release updates ↗</a></div>
+      <div class="start-copy"><span class="path-tag">v1.0-paper · Release pending</span><h3>Reproduce paper results</h3><p>Recompute Raw and Reasoning-Verified scores for 19 model entries and all 190 values in Table 2. CPU only; no API key required.</p><p>After the data release:</p><pre><code>psychemme download --bundle replay --output data/PsycheMME
+psychemme replay --root data/PsycheMME --output runs/paper_replay.json</code></pre><a href="https://huggingface.co/datasets/psychemme/PsycheMME" target="_blank" rel="noopener">Release updates ↗</a></div>
     </div>
     <div class="start-panel" id="panel-model" role="tabpanel" aria-labelledby="tab-model">
-      <div class="start-copy"><span class="path-tag">Coming Soon</span><h3>Evaluate your model</h3><p>Dataset: Coming Soon.</p><a href="https://github.com/psychemme/PsycheMME/blob/main/docs/MODEL_INTEGRATION.md" target="_blank" rel="noopener">Model integration guide ↗</a></div>
+      <div class="start-copy"><span class="path-tag">v1.0-paper · Release pending</span><h3>Evaluate your model</h3><p>Set your model and Judge API keys in the shell, download the benchmark, then run <code>psychemme infer</code>, <code>psychemme judge</code>, and <code>psychemme score</code>. The guide includes each command and the expected output files.</p><a href="https://github.com/psychemme/PsycheMME/blob/main/docs/MODEL_INTEGRATION.md" target="_blank" rel="noopener">Model integration guide ↗</a></div>
     </div>
-    <p class="start-footnote">The offline synthetic demo and model checkpoints are available. Dataset and evaluation-log downloads are coming soon; follow <a href="https://huggingface.co/datasets/psychemme/PsycheMME" target="_blank" rel="noopener">the release page ↗</a> for updates.</p>
+    <p class="start-footnote">The offline synthetic demo and model checkpoints are available. The benchmark download is being prepared. Data construction and training recipes are coming soon; model checkpoints and evaluation commands are available. Follow <a href="https://huggingface.co/datasets/psychemme/PsycheMME" target="_blank" rel="noopener">the release page ↗</a> for updates.</p>
     <span class="sr-only" id="copy-status" role="status" aria-live="polite"></span>
   </div>
 </section>

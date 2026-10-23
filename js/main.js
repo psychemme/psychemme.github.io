@@ -78,8 +78,6 @@
     enlargedImage.src = link.href;
     enlargedImage.alt = link.querySelector('img').alt;
     lightbox.querySelector('.lightbox-title').textContent = link.dataset.title;
-    lightbox.querySelector('.lightbox-vector').href = link.dataset.vector;
-    lightbox.querySelector('.lightbox-vector').textContent = link.dataset.vectorLabel || 'Vector PDF ↗';
     lightbox.showModal();
     lightbox.querySelector('.lightbox-body').scrollTo(0, 0);
     document.body.classList.add('modal-open');

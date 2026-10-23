@@ -2,18 +2,6 @@
 .hero-copy { max-width: 860px; text-align: center; font-size: 17px; line-height: 1.65; }
 .hero-scope { max-width: 900px; margin: 12px auto 0; color: var(--muted); font-size: 14px; line-height: 1.65; }
 .hero-actions { margin-top: 23px; }
-.task-map { max-width: 960px; margin: 30px auto 0; text-align: left; }
-.task-map-flow { display: grid; grid-template-columns: minmax(0,1.1fr) 38px minmax(0,1fr) 38px minmax(0,1fr); align-items: center; gap: 10px; padding: 0 5px 20px; }
-.task-map strong { color: #315e61; font-size: 15px; font-weight: 650; }
-.task-map p { margin-top: 4px; color: #647978; font-size: 12.5px; line-height: 1.55; }
-.task-map-cues { display: flex; align-items: center; gap: 15px; }
-.task-map-cues svg { flex: 0 0 56px; width: 56px; height: 38px; fill: none; stroke: #7baba2; stroke-width: 1.4; }
-.task-map-cues svg path:first-of-type { fill: #cbe3db; stroke: #7baba2; }
-.task-map-arrow { color: #9bbab2; font: 25px/1 var(--sans); text-align: center; }
-.task-map figcaption { display: flex; justify-content: center; align-items: baseline; gap: 16px; margin: 0; padding-top: 13px; border-top: 1px solid #c8ded6; }
-.task-map figcaption span { color: var(--lavender-dark); font-size: 12px; font-weight: 650; white-space: nowrap; }
-.task-map figcaption p { margin: 0; font-size: 13px; }
-
 .case-examples .sample-toolbar { padding: 0 0 18px; background: transparent; border: 0; border-bottom: 1px solid #dcd5e5; border-radius: 0; }
 .sample-reading { max-width: 910px; padding: 12px 0 0; }
 .sample-question { max-width: 850px; margin-bottom: 20px; color: var(--ink); font: 600 22px/1.5 var(--sans); }
@@ -37,22 +25,9 @@
 .sample-origin { margin-top: 18px; color: #73817f; font-size: 11px; }
 .case-examples .sample-license { max-width: 910px; }
 
-@media (max-width: 800px) {
-  .task-map-flow { grid-template-columns: minmax(0,1fr) 22px minmax(0,1fr) 22px minmax(0,1fr); gap: 8px; }
-  .task-map-cues { display: block; }
-  .task-map-cues svg { display: none; }
-}
 @media (max-width: 620px) {
   .hero-copy { font-size: 15px; line-height: 1.7; }
   .hero-scope { font-size: 12px; }
-  .task-map { margin-top: 25px; }
-  .task-map-flow { grid-template-columns: minmax(0,1fr) 15px minmax(0,1fr) 15px minmax(0,1fr); gap: 5px; padding: 0 0 15px; }
-  .task-map strong { display: block; font-size: 11px; line-height: 1.5; }
-  .task-map-flow p { display: none; }
-  .task-map-arrow { font-size: 18px; }
-  .task-map figcaption { display: block; text-align: center; padding-top: 10px; }
-  .task-map figcaption span { font-size: 11px; }
-  .task-map figcaption p { font-size: 11px; margin-top: 4px; }
   .sample-question { font-size: 19px; }
   .sample-reading .sample-options { font-size: 14px; padding-left: 23px; }
   .sample-reading .sample-options-compact { columns: 1; }

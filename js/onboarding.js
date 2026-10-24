@@ -1,28 +1,5 @@
 (() => {
   'use strict';
-  const tabs = [...document.querySelectorAll('.start-tabs [role="tab"]')];
-  function activate(tab) {
-    tabs.forEach((candidate) => {
-      const active = candidate === tab;
-      candidate.setAttribute('aria-selected', String(active));
-      candidate.tabIndex = active ? 0 : -1;
-      document.getElementById(candidate.getAttribute('aria-controls')).hidden = !active;
-    });
-  }
-  tabs.forEach((tab, index) => {
-    tab.addEventListener('click', () => activate(tab));
-    tab.addEventListener('keydown', (event) => {
-      let next;
-      if (event.key === 'ArrowRight') next = (index + 1) % tabs.length;
-      if (event.key === 'ArrowLeft') next = (index + tabs.length - 1) % tabs.length;
-      if (event.key === 'Home') next = 0;
-      if (event.key === 'End') next = tabs.length - 1;
-      if (next !== undefined) {
-        event.preventDefault(); activate(tabs[next]); tabs[next].focus();
-      }
-    });
-  });
-  activate(tabs[0]);
   document.querySelectorAll('[data-copy]').forEach((button) => button.addEventListener('click', async () => {
     const block = document.getElementById(button.dataset.copy);
     try {
@@ -82,7 +59,7 @@
     IGNORE: 'Ignore'
   };
   const readable = (text) => strategyLabels[text] || text;
-  fetch('assets/released-examples.json').then((response) => {
+  fetch('assets/released-examples.json?v=2').then((response) => {
     if (!response.ok) throw new Error('Example download failed');
     return response.json();
   }).then((data) => {
@@ -130,7 +107,7 @@
     choice.addEventListener('change', render); render();
   }).catch(() => {
     const message = node('p', 'sample-loading', 'Text preview is unavailable. ');
-    const link = node('a', '', 'Release updates ↗');
+    const link = node('a', '', 'Open benchmark ↗');
     link.href = 'https://huggingface.co/datasets/psychemme/PsycheMME';
     link.target = '_blank'; link.rel = 'noopener';
     message.append(link); content.replaceChildren(message);

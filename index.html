@@ -17,10 +17,12 @@
   <link rel="stylesheet" href="css/refinements.css?v=2">
   <link rel="stylesheet" href="css/reader.css?v=2">
   <link rel="stylesheet" href="css/layout-trial.css?v=1">
+  <link rel="stylesheet" href="css/interact.css?v=1">
   <script src="js/resources.js?v=6" defer></script>
   <script src="js/main.js?v=11" defer></script>
   <script src="js/select.js?v=1" defer></script>
   <script src="js/onboarding.js?v=5" defer></script>
+  <script src="js/interact.js?v=1" defer></script>
   <title>PsycheMME: A Psychology-Informed Benchmark for Social Understanding and Interaction in Videos</title>
 </head>
 <body id="top">
@@ -62,15 +64,15 @@
       <div><p class="section-label">02 / Results</p><h2 id="results-title">Performance across eight diagnostic capabilities</h2></div>
       <p class="section-intro"><strong>17 frozen models: 8 proprietary and 9 open-weight.</strong> All are evaluated on the same 1,000 questions under a shared input policy and scoring rubric. Two adapted checkpoints are evaluated separately.</p>
     </div>
-    <figure class="paper-figure main-results-figure"><a class="figure-frame" href="assets/figures/results-overview.svg?v=2" data-lightbox data-title="Main results from Table 2" data-vector="assets/figures/results-overview.svg?v=2" data-vector-label="Vector SVG ↗" aria-label="Enlarge main results from Table 2"><img src="assets/figures/results-overview.svg?v=2" alt="Raw and Reasoning-Verified macro scores for 8 proprietary and 9 open-weight frozen models, plus the separate Qwen3.5-4B adaptation comparison" width="1530" height="520" loading="lazy" decoding="async"><span class="zoom-hint">Enlarge ↗</span></a><figcaption><strong>Main results.</strong> Raw Answer and Reasoning-Verified macro scores for (a) eight proprietary and (b) nine open-weight frozen models. (c) Qwen3.5-4B Base, SFT, and SFT+GRPO; the two adapted checkpoints are separate from the 17-model frozen comparison. All values are from Table 2. <a class="vector-link" href="assets/figures/results-overview.svg?v=2" target="_blank" rel="noopener">Vector SVG ↗</a></figcaption></figure>
+    <figure class="paper-figure main-results-figure"><a class="figure-frame" href="assets/figures/results-overview.svg?v=2" data-lightbox data-title="Main results from Table 2" data-vector="assets/figures/results-overview.svg?v=2" data-vector-label="Vector SVG ↗" aria-label="Enlarge main results from Table 2"><img src="assets/figures/results-overview.svg?v=2" alt="Raw and Reasoning-Verified macro scores for 8 proprietary and 9 open-weight frozen models, plus the separate Qwen3.5-4B adaptation comparison" width="1530" height="520" loading="lazy" decoding="async"><span class="zoom-hint"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 2H2v4m8-4h4v4M2 10v4h4m8-4v4h-4"/></svg> Enlarge</span></a><figcaption><strong>Main results.</strong> Raw Answer and Reasoning-Verified macro scores for (a) eight proprietary and (b) nine open-weight frozen models. (c) Qwen3.5-4B Base, SFT and SFT+GRPO, reported separately. Values from Table 2. <a class="vector-link" href="assets/figures/results-overview.svg?v=2" target="_blank" rel="noopener">Vector SVG ↗</a></figcaption></figure>
     <div class="results-visuals">
 <article class="chart-panel main-result-table">
         <h3>Selected model comparisons</h3>
         <div class="table-scroll" tabindex="0" role="region" aria-label="Selected overall scores from Table 2">
           <table class="summary-table"><caption>Table 2 · overall macro scores (%)</caption><thead><tr><th scope="col">Model</th><th scope="col">Raw</th><th scope="col">Verified</th></tr></thead><tbody><tr class="highlight"><th scope="row">Gemini 3.6 Flash</th><td>85.68</td><td><strong>80.03</strong></td></tr><tr class=""><th scope="row">Claude Opus 5</th><td>82.34</td><td><strong>76.71</strong></td></tr><tr class=""><th scope="row">GPT-5.6 Sol</th><td>81.09</td><td><strong>75.98</strong></td></tr><tr class=""><th scope="row">Qwen3.8-Max</th><td>81.48</td><td><strong>75.59</strong></td></tr><tr class="highlight"><th scope="row">Qwen3.8-27B</th><td>79.97</td><td><strong>72.74</strong></td></tr><tr class=""><th scope="row">Qwen3.5-9B</th><td>76.54</td><td><strong>66.45</strong></td></tr></tbody></table>
         </div>
-        <p class="table-note">Gemini 3.6 Flash leads the proprietary group; Qwen3.8-27B leads the open-weight group. All 17 frozen models and both adapted checkpoints are available in the complete table below.</p>
-        <p class="table-note">The Raw–Verified gap reflects reduced weighted credit under the fixed rationale rubric, including its normalization.</p>
+        <p class="table-note">Gemini 3.6 Flash leads the proprietary models and Qwen3.8-27B leads the open-weight models. Every model is in the full table below.</p>
+        <p class="table-note">Verified is lower than Raw because it also scores the rationale. Part of the gap comes from the fixed 1/1.44 normalization.</p>
       </article>
       <figure class="paper-figure diagnostic-figure"><a class="figure-frame" href="assets/figures/performance.webp" data-lightbox data-title="Figure 5. Performance breakdown" data-vector="assets/figures/performance.pdf" aria-label="Enlarge Figure 5. Performance breakdown"><img src="assets/figures/performance.webp" alt="Figure 5. Performance breakdown" width="2919" height="3000" loading="lazy" decoding="async"><span class="zoom-hint"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 2H2v4m8-4h4v4M2 10v4h4m8-4v4h-4"/></svg> Enlarge</span></a><figcaption><strong>Figure 5.</strong> Capability profiles, verification stages, credit distributions, and loss attribution. <a class="vector-link" href="assets/figures/performance.pdf" target="_blank" rel="noopener">Vector PDF ↗</a></figcaption></figure>
     </div>
@@ -140,7 +142,7 @@
     </div>
     <details class="details"><summary><span>Task adaptation &amp; human reference <small>Tables 2 &amp; 5</small></span></summary>
       <div class="table-shell"><div class="table-scroll" tabindex="0" role="region" aria-label="Task adaptation scores"><table><caption>Qwen3.5-4B adaptation · same 1,000 questions · macro scores (%)</caption><thead><tr><th scope="col">Checkpoint</th><th scope="col">Raw</th><th scope="col">Verified</th></tr></thead><tbody><tr><th scope="row">Base</th><td>47.68</td><td>37.71</td></tr><tr><th scope="row">SFT</th><td>72.58</td><td>52.13</td></tr><tr><th scope="row">SFT+GRPO</th><td>73.19</td><td>52.62</td></tr></tbody></table></div></div>
-      <div class="supporting-result"><p><strong>Human baseline.</strong> Five annotators independently answer 300 sampled questions (1,500 responses): 85.27% Raw micro accuracy and 84.82% Raw macro accuracy. This is a sampled subset.</p><p><strong>Judge review.</strong> Five psychology experts endorse 1,352 of 1,500 presented Judge decisions (90.13%) across 300 sampled cases. This measures endorsement of the presented decisions.</p></div>
+      <div class="supporting-result"><p><strong>Human baseline.</strong> Five annotators independently answer 300 sampled questions (1,500 responses): 85.27% Raw micro accuracy and 84.82% Raw macro accuracy.</p><p><strong>Judge review.</strong> Five psychology experts endorse 1,352 of 1,500 Judge decisions (90.13%) across 300 sampled cases.</p></div>
     </details>
   </div>
 </section>
@@ -171,18 +173,18 @@
       <p class="review-note"><strong>Five independent reviewers.</strong><span>Researchers with psychology backgrounds check validity, correctness, and psychological consistency. Only unanimously approved items enter the frozen benchmark.</span></p>
     </div>
     <div class="method-block">
-      <div class="block-heading"><span class="block-index">C /</span><h3>Reasoning-Verified evaluation.</h3></div>
+      <div class="block-heading"><span class="block-index">C /</span><h3>Reasoning-Verified evaluation</h3></div>
       <div class="evaluation-grid">
         <div>
           <article class="metric-description"><h4>Raw Answer</h4><p>Choice answers must exactly match the reference option or complete option set. A fixed semantic Judge assigns open answers zero, partial (0.5), or full credit.</p></article>
-          <article class="metric-description"><h4>Reasoning-Verified</h4><p>Weight answer credit by the presence of an informative rationale, support from annotated reference cues, and logical integrity. Qwen3.8-27B serves as the fixed Judge; reference answers enter scoring only.</p><div class="rubric-points"><span>Answer correctness</span><span>Informative rationale</span><span>Evidence Support</span><span>Logical Integrity</span></div></article>
-          <p class="composition-note">Both headline metrics are macro-averaged across the eight capabilities. Evaluation concerns offline judgments in recorded interactions.</p>
+          <article class="metric-description"><h4>Reasoning-Verified</h4><p>Weight answer credit by the presence of an informative rationale, support from annotated reference cues, and logical integrity. Qwen3.8-27B serves as the fixed Judge; reference answers enter scoring only.</p><div class="rubric-points"><span>Answer correctness</span><span>Informative rationale</span><span>Evidence support</span><span>Logical integrity</span></div></article>
+          <p class="composition-note">Both headline metrics are macro-averaged across the eight capabilities. All judgments are made offline on recorded videos.</p>
         </div>
         <aside class="equation-panel" aria-label="Reasoning-Verified formula from Section 3.5">
           <span class="mini-label">Section 3.5 / The scoring rule</span>
           <div class="equation" aria-label="s i equals a i times c i times e i times ell i divided by lambda squared">s<sub>i</sub> = a<sub>i</sub> c<sub>i</sub> e<sub>i</sub> ℓ<sub>i</sub> / λ<sup>2</sup></div>
           <p><strong>λ = 1.2.</strong> Answer correctness a<sub>i</sub> ∈ [0, 1]; rationale coverage c<sub>i</sub> ∈ {0, 1}; cue support e<sub>i</sub> and logical integrity ℓ<sub>i</sub> ∈ [0, λ].</p>
-          <p class="normalization">With a correct answer, an informative rationale, normal support, and acceptable logic, credit is 1 / 1.44 ≈ <strong>69.44%</strong>. The Raw–Verified gap includes this fixed normalization; it cannot be attributed entirely to reasoning failure.</p>
+          <p class="normalization">With a correct answer, an informative rationale, normal support, and acceptable logic, credit is 1 / 1.44 ≈ <strong>69.44%</strong>. Part of the Raw–Verified gap is this normalization, not reasoning failure.</p>
         </aside>
       </div>
     </div>
@@ -193,18 +195,18 @@
   <div class="wrap">
     <div class="section-header">
       <div><p class="section-label">04 / Case Study</p><h2 id="cases-title">Illustrative model responses</h2></div>
-      <p class="section-intro">The paper’s four examples compare model responses with supplied context and frozen references. The Gemini example is especially diagnostic: the answer matches, but the cited conversation falls outside the queried time window.</p>
+      <p class="section-intro">Four examples from the paper. In the Gemini case the answer is right, but the rationale cites a conversation outside the queried time window.</p>
     </div>
-    <figure class="paper-figure "><a class="figure-frame" href="assets/figures/cases.webp" data-lightbox data-title="Figure 6. Illustrative model responses" data-vector="assets/figures/cases.pdf" aria-label="Enlarge Figure 6. Illustrative model responses"><img src="assets/figures/cases.webp" alt="Figure 6. Illustrative model responses" width="3000" height="1470" loading="lazy" decoding="async"><span class="zoom-hint"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 2H2v4m8-4h4v4M2 10v4h4m8-4v4h-4"/></svg> Enlarge</span></a><figcaption><strong>Figure 6.</strong> Preference mismatch, temporal cue mismatch, interaction-timing disagreement, and goal substitution. Cases and outputs are reproduced from the paper. They illustrate specific discrepancies, not their prevalence across the benchmark. <a class="vector-link" href="assets/figures/cases.pdf" target="_blank" rel="noopener">Vector PDF ↗</a></figcaption></figure>
+    <figure class="paper-figure "><a class="figure-frame" href="assets/figures/cases.webp" data-lightbox data-title="Figure 6. Illustrative model responses" data-vector="assets/figures/cases.pdf" aria-label="Enlarge Figure 6. Illustrative model responses"><img src="assets/figures/cases.webp" alt="Figure 6. Illustrative model responses" width="3000" height="1470" loading="lazy" decoding="async"><span class="zoom-hint"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 2H2v4m8-4h4v4M2 10v4h4m8-4v4h-4"/></svg> Enlarge</span></a><figcaption><strong>Figure 6.</strong> Preference mismatch, temporal cue mismatch, interaction-timing disagreement, and goal substitution. Reproduced from the paper. These are individual examples, not frequency estimates. <a class="vector-link" href="assets/figures/cases.pdf" target="_blank" rel="noopener">Vector PDF ↗</a></figcaption></figure>
     <div class="case-notes">
       <article class="case-note"><p class="mini-label">Claude Opus 5 / Memory</p><h3>Preference mismatch</h3><p>The supplied history specifies a preference for less personal follow-up. The response asks for more details, conflicting with that context.</p></article>
       <article class="case-note"><p class="mini-label">Gemini 3.1 Pro / Response</p><h3>Temporal mismatch</h3><p>The selected response strategy is correct, but its rationale cites a later conversation window rather than the queried interval.</p></article>
-      <article class="case-note"><p class="mini-label">GPT-5.6 Sol / Timing</p><h3>Timing disagreement</h3><p>The prediction anchors waiting to a later speech boundary than the frozen reference, illustrating a disagreement about the annotated timing interval.</p></article>
+      <article class="case-note"><p class="mini-label">GPT-5.6 Sol / Timing</p><h3>Timing disagreement</h3><p>The model waits for a later speech boundary than the reference does.</p></article>
       <article class="case-note"><p class="mini-label">Qwen3.8-Max / Need</p><h3>Goal substitution</h3><p>A fulfilled inquiry about why redwoods were cut is interpreted as an unmet request by substituting a different goal.</p></article>
     </div>
 <div class="case-examples" id="examples" aria-labelledby="examples-title">
   <div class="case-examples-inner">
-    <div class="section-header"><div><p class="section-label">Illustrative questions</p><h3 id="examples-title">A closer look at a question</h3></div><p class="section-intro">Choose a capability and read a question. You can reveal its reference answer below. These are text previews; the original video and transcript are needed for evaluation.</p></div>
+    <div class="section-header"><div><p class="section-label">Illustrative questions</p><h3 id="examples-title">A closer look at a question</h3></div><p class="section-intro">Pick a capability, read the question, then reveal the reference answer. Only the text is shown here; the benchmark itself uses the video and transcript.</p></div>
     <div class="sample-toolbar"><label for="sample-capability">Capability</label><select id="sample-capability"><option value="G">G · Grounding</option><option value="W">W · Psychological Understanding</option><option value="N" selected>N · Need</option><option value="T">T · Timing</option><option value="S">S · Verbal Response</option><option value="A">A · Action</option><option value="M">M · Memory</option><option value="R">R · Risk</option></select><span id="sample-meta"></span></div>
     <div id="sample-content" aria-live="polite"><p class="sample-loading">Loading illustrative text examples… <a href="https://huggingface.co/datasets/psychemme/PsycheMME" target="_blank" rel="noopener">Release updates ↗</a></p></div>
     <p class="sample-license">Text from EasyCom (<a href="assets/EasyCom_CC_BY_NC_4.0.txt" target="_blank" rel="noopener">CC BY-NC 4.0</a>) and IndEgo (<a href="assets/IndEgo_CC_BY_4.0.txt" target="_blank" rel="noopener">CC BY 4.0</a>) · <a href="assets/EXAMPLE_NOTICES.md" target="_blank" rel="noopener">Attribution and selection notes</a>. Question wording and reference annotations follow the published benchmark.</p>

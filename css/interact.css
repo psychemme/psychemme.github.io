@@ -1,0 +1,41 @@
+/* Styles for js/interact.js. Uses the existing palette; remove both files to drop the enhancements. */
+.read-progress { position: fixed; inset: 0 0 auto; z-index: 40; height: 2px; background: linear-gradient(90deg, var(--accent), var(--lavender)); transform: scaleX(0); transform-origin: left; pointer-events: none; }
+
+/* Complete results table */
+.main-table td.heat { background: rgba(32,116,121,var(--heat)); }
+.main-table tbody tr:hover th, .main-table tbody tr:hover td { box-shadow: inset 0 1px 0 #9cc9c1, inset 0 -1px 0 #9cc9c1; }
+.sort-button { display: inline-flex; align-items: center; gap: 4px; padding: 0; border: 0; background: none; color: inherit; font: inherit; cursor: pointer; }
+.sort-button::after { content: '↕'; font-size: 10px; opacity: .35; }
+.sort-button:hover { color: var(--accent); }
+.sort-button:hover::after { opacity: .7; }
+[aria-sort='descending'] .sort-button::after { content: '↓'; opacity: 1; color: var(--accent); }
+[aria-sort='ascending'] .sort-button::after { content: '↑'; opacity: 1; color: var(--accent); }
+[aria-sort] .sort-button { color: var(--accent-dark); }
+.sort-hint { margin-left: auto; align-self: center; color: var(--muted); font-size: 12px; }
+
+/* Selected comparisons: bar behind the Verified score */
+.summary-table td.score-bar { position: relative; z-index: 0; }
+.summary-table td.score-bar::before { content: ''; position: absolute; z-index: -1; left: 6px; top: 50%; height: 60%; width: calc((100% - 12px) * var(--score) / 100); transform: translateY(-50%); transform-origin: left; background: rgba(32,116,121,.12); border-radius: 3px; transition: transform .7s cubic-bezier(.2,.7,.2,1); }
+.summary-table.will-reveal td.score-bar::before { transform: translateY(-50%) scaleX(0); }
+.summary-table.is-revealed td.score-bar::before { transform: translateY(-50%) scaleX(1); }
+
+/* Memory intervention bars */
+.memory-chart .bar-raw, .memory-chart .bar-verified { transform-origin: left; transition: transform .8s cubic-bezier(.2,.7,.2,1); }
+.memory-chart.will-reveal .bar-raw, .memory-chart.will-reveal .bar-verified { transform: scaleX(0); }
+.memory-chart.is-revealed .bar-raw, .memory-chart.is-revealed .bar-verified { transform: scaleX(1); }
+.memory-chart.is-revealed .score-row:nth-child(2) .bar-raw, .memory-chart.is-revealed .score-row:nth-child(2) .bar-verified { transition-delay: .12s; }
+.memory-chart.is-revealed .score-row:nth-child(3) .bar-raw, .memory-chart.is-revealed .score-row:nth-child(3) .bar-verified { transition-delay: .24s; }
+
+/* Capability list → example question */
+.capability.is-linked { cursor: pointer; border-radius: 6px; transition: background .15s, color .15s; }
+.capability.is-linked:hover, .capability.is-linked:focus-visible { background: var(--accent-soft); color: var(--accent-dark); }
+.capability.is-linked::after { content: '→'; margin-left: 6px; opacity: 0; transition: opacity .15s, transform .15s; display: inline-block; transform: translateX(-3px); }
+.capability.is-linked:hover::after, .capability.is-linked:focus-visible::after { opacity: .8; transform: none; }
+.taxonomy-hint { margin-top: 12px; color: var(--muted); font-size: 12.5px; }
+
+@media (max-width: 700px) {
+  .sort-hint { width: 100%; margin-left: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .read-progress, .summary-table td.score-bar::before, .memory-chart .bar-raw, .memory-chart .bar-verified, .capability.is-linked { transition: none; }
+}

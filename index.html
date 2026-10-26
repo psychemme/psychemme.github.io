@@ -23,6 +23,7 @@
   <script src="js/select.js?v=1" defer></script>
   <script src="js/onboarding.js?v=5" defer></script>
   <script src="js/interact.js?v=1" defer></script>
+  <link rel="stylesheet" href="css/classic.css?v=1">
   <title>PsycheMME: A Psychology-Informed Benchmark for Social Understanding and Interaction in Videos</title>
 </head>
 <body id="top">
@@ -36,15 +37,22 @@
   </nav>
 </header>
 <main>
-<section class="hero" aria-labelledby="paper-title">
+<section class="paper-head" aria-labelledby="paper-title">
   <div class="wrap">
-    <h1 id="paper-title"><span class="title-line"><span class="title-project">PsycheMME:</span> A Psychology-Informed Benchmark</span><span class="title-line">for Social Understanding and Interaction in Videos</span></h1>
-    <p class="anonymous-submission">Psychology-informed video understanding and interaction</p>
-    <p class="hero-copy"><strong>PsycheMME</strong> evaluates how video models infer people’s states and needs, choose a response, and support that choice with evidence.</p>
-    <p class="hero-scope">The benchmark contains 1,000 questions from 630 video episodes across eight psychology-informed capabilities.</p>
+    <h1 id="paper-title"><span class="title-project">PsycheMME</span>: A Psychology-Informed Benchmark for Social Understanding and Interaction in Videos</h1>
+    <p class="lede">A video benchmark that checks whether models can read people, decide how to respond, and back the answer with evidence from the clip.</p>
     <div class="hero-actions" aria-label="Project resources"><a class="button" data-resource="code" href="https://github.com/psychemme/PsycheMME" target="_blank" rel="noopener"><img class="platform-mark" src="assets/icons/github-white.svg" alt="" width="20" height="20" aria-hidden="true"> Code</a><a class="button" data-resource="dataset" href="https://huggingface.co/datasets/psychemme/PsycheMME" target="_blank" rel="noopener"><img class="platform-mark" src="assets/icons/huggingface.svg" alt="" width="20" height="20" aria-hidden="true"> Dataset</a><a class="button" data-resource="models" href="https://huggingface.co/psychemme/models" target="_blank" rel="noopener"><img class="platform-mark" src="assets/icons/huggingface.svg" alt="" width="20" height="20" aria-hidden="true"> Models</a><a class="button" data-resource="logs" href="https://huggingface.co/datasets/psychemme/PsycheMME-logs" target="_blank" rel="noopener"><img class="platform-mark" src="assets/icons/huggingface.svg" alt="" width="20" height="20" aria-hidden="true"> Evaluation Logs</a></div>
+    <dl class="stats"><div><dt>Questions</dt><dd>1,000</dd></div><div><dt>Video episodes</dt><dd>630</dd></div><div><dt>Capabilities</dt><dd>8</dd></div><div><dt>Models evaluated</dt><dd>17</dd></div></dl>
   </div>
 </section>
+<section class="tldr-band" aria-label="Summary">
+  <div class="wrap tldr-grid">
+    <div><h2>What it measures</h2><p>Eight capabilities, from grounding people and inferring their state to deciding when and how to respond, with memory and social boundaries as context.</p></div>
+    <div><h2>How it scores</h2><p>Raw Answer checks the choice. Reasoning-Verified also checks whether the rationale is supported by cues in the video and is logically consistent.</p></div>
+    <div><h2>What we found</h2><p>Interaction Timing has the lowest Verified score for all 17 models. Nearly half of correct Timing answers rest on weak or contradicted evidence.</p></div>
+  </div>
+</section>
+
 <section class="section overview" id="overview" aria-labelledby="overview-title">
   <div class="wrap">
     <div class="section-header">
@@ -115,7 +123,7 @@
       <noscript><p class="composition-note">The table shows all frozen models. The two adapted checkpoints are listed in the paper and the adaptation summary below.</p></noscript>
     </details>
     <div class="findings">
-      <article class="finding"><p class="mini-label">Finding 01 / Timing</p><h3>Interaction Timing remains challenging.</h3><p>Timing has the lowest Verified score and credit retention for <strong>all 17 frozen models</strong>. Among correct single-choice responses, weak or contradicted cue support occurs in 49.74% of Timing responses, versus 7.62% for the other capabilities.</p></article>
+      <article class="finding"><p class="mini-label">Finding 01 / Timing</p><h3>Interaction Timing remains challenging.</h3><p>Timing has the lowest Verified score and credit retention for <strong>all 17 frozen models</strong>. Among correct single-choice responses, weak or contradicted cue support occurs in 49.74% of Timing responses, versus 7.62% for the other capabilities (difference 42.12 points, 95% CI 33.37–51.50).</p></article>
       <article class="finding"><p class="mini-label">Finding 02 / Completeness</p><h3>Similar Need scores conceal completeness differences.</h3><p>Gemini 3.6 Flash and Claude Opus 5 have similar Need Verified scores (69.97 / 69.10). On the same 35 open Need questions, their full-credit rates are <strong>28.57% / 68.57%</strong>, revealing a difference in answer completeness.</p></article>
       <article class="finding"><p class="mini-label">Finding 03 / Consensus</p><h3>Voting can override correct minority answers.</h3><p>For the eight proprietary models on 72 Timing questions, oracle answer coverage reaches 91.67%, while plurality voting reaches 57.64% and the best individual model reaches 66.67%. <strong>Shared wrong choices can outvote correct minority answers.</strong></p></article>
       <article class="finding"><p class="mini-label">Finding 04 / Context</p><h3>Performance depends on relevant context.</h3><p>Full inputs improve Raw scores over Question-only by 12.50 points for Qwen3.5-9B and 12.43 for MiniCPM-V4.5. In the Memory intervention, gains depend on <strong>matched, relevant history</strong>.</p></article>

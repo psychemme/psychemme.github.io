@@ -231,14 +231,14 @@
   <div class="wrap">
     <div class="section-header"><div><p class="section-label">Start here</p><h2 id="start-title">Evaluate your model</h2></div><p class="section-intro">Clone the code, configure your model and Judge endpoints, and run the benchmark.</p></div>
     <div class="start-panel" id="panel-model">
-      <div class="start-copy"><h3>Infer → Judge → Score</h3><p>Set the endpoint URLs, model IDs and API keys in <code>.env</code>. The script downloads the benchmark and saves predictions, judgments and scores. Install FFmpeg before running.</p><a href="https://github.com/psychemme/PsycheMME/blob/main/docs/MODEL_INTEGRATION.md" target="_blank" rel="noopener">Evaluation guide on GitHub ↗</a></div>
+      <div class="start-copy"><h3>Infer → Judge → Score</h3><p>Set your endpoint URLs, model IDs, API keys and official Ego4D AWS credentials in <code>.env</code>. The script prepares all 630 videos and runs evaluation. Install FFmpeg before running.</p><a href="https://github.com/psychemme/PsycheMME/blob/main/docs/MODEL_INTEGRATION.md" target="_blank" rel="noopener">Evaluation guide on GitHub ↗</a> <a href="https://github.com/psychemme/PsycheMME/blob/main/docs/DOWNLOAD.md" target="_blank" rel="noopener">Video download guide ↗</a></div>
       <div class="command-box"><button type="button" class="copy-command" data-copy="evaluate-command">Copy commands</button><pre id="evaluate-command" tabindex="0"><code>git clone https://github.com/psychemme/PsycheMME.git
 cd PsycheMME
 python3.11 -m venv .venv
 source .venv/bin/activate
 python -m pip install '.[data]'
 cp .env.example .env
-# Configure endpoints and API keys in .env
+# Configure endpoints, API keys and Ego4D AWS credentials in .env
 bash scripts/evaluate.sh</code></pre></div>
     </div>
     <span class="sr-only" id="copy-status" role="status" aria-live="polite"></span>
